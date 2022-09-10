@@ -1,0 +1,106 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background: #fff url(throbber.gif) center no-repeat;
+}
+
+h1 {
+	font: 16pt 'Verdana', sans-serif;
+	margin: .1em 0 .2em;
+}
+
+p {
+	font: 11pt 'Verdana', sans-serif;
+	margin: .2em 0 .4em;
+}
+
+a {
+	border-bottom: 1px dashed #4682b4;
+	color: #4682b4;
+	text-decoration: none;
+}
+
+a:hover {
+	background: #4682b4;
+	color: #fff;
+}
+
+#ui, #fail {
+	padding: 2em 4em;
+}
+
+#fail h1 {
+	color: #a00;
+}
+
+#smsinstructions {
+	background: #ffffe0;
+	border: 1px dotted #ffa500;
+	margin: .2em 0 0 -.2em;
+	padding: .2em .4em 0;
+}
+
+#smsinstructions span {
+	padding: 2px;
+}
+
+#message_text {
+	background: #b0e0e6;
+}
+
+#shortcode {
+	background: #90ee90;
+}
+
+#message_cost {
+	background: #ffdead;
+}
+
+#notes {
+	font-style: italic;
+}
+
+#ui a {
+	font: 12pt 'Verdana', sans-serif;
+	margin-bottom: 1px;
+}
+
+#ui a.active {
+	background: #4682b4;
+	color: #fff;
+}
+
+.providers {
+	margin: 0 0 .4em 1.1em;
+}
+
+.providers h1 {
+	font-size: 14pt;
+}
+
+#ui.tabs #countries, #ui.tabs #providers ul {
+	list-style-type: none;
+	margin: 1em 0;
+	padding: 3px 10px;
+	text-align: left;
+}
+
+#ui.tabs li {
+	float: left;
+	margin: 0 1px 10px;
+}
+
+#ui.tabs a {
+	background: #fafad2;
+	border: 1px solid #bdb76b;
+	padding: 3px 4px;
+}
+
+#ui.tabs a:hover, #ui.tabs a.active {
+	background: #4682b4;
+	border: 1px solid #2f4f4f;
+	color: #fff;
+}

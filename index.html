@@ -1,0 +1,939 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+
+
+    
+        <title>Обменов.ком :: Автоматический обмен WMZ, WMR, WMU, WME. 
+Ввод, вывод. Самые дешевые ПИН-коды в сети!</title>
+		<meta http-equiv="Content-Type" content="text/html; 
+charset=windows-1251">
+		<meta name="language" content="ru">
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="imagetoolbar" content="no">
+		<meta name="description" content="...">
+		<meta name="keywords" content="...">
+		<link rel="stylesheet" href="index_files/style.css" type="text/css" 
+media="screen">
+		<!--[if lte IE 7]><link rel="stylesheet" href="ie.css" type="text/css" media="screen" /><![endif]-->
+        <style>
+		<?php
+       	if ( isset($_SESSION['AuthUsername']) ) {
+		echo '.wrapper {background: url("i/wrapper-auth.jpg") center 0 no-repeat;}';
+		}else{
+		echo '.wrapper {background: url("i/wrapper.jpg") center 0 no-repeat;}';
+		}
+		?>
+		</style>
+        <script language="javascript">
+d = document;
+var alertmess='';
+var predel=new Array ();
+var pred=new Array ();
+var courses=new Array ();
+
+
+predel[1]=99.99;
+predel[2]=999.99;
+predel[3]=4999.99;
+
+	courses['USD']=new Array ();pred['USD']=new Array ();courses['USD']['UAH']=7.9575;courses['USD']['RUR']=29.692164179104;courses['USD']['EUR']=0.74195804195804;courses['USD']['WMZ']=1;courses['USD']['WMU']=7.9575;courses['USD']['WME']=0.74195804195804;courses['USD']['WMR']=29.692164179104;courses['USD']['P24UAH']=7.9575;courses['USD']['P24USD']=1;courses['USD']['USD']=1;courses['USD']['MCVUAH']=7.9575;courses['USD']['MCVUSD']=1;courses['USD']['MCVRUR']=29.692164179104;courses['UAH']=new Array ();pred['UAH']=new Array ();courses['UAH']['USD']=0.12566760917374;courses['UAH']['RUR']=3.7313432835821;courses['UAH']['EUR']=0.093240093240093;courses['UAH']['WMZ']=0.12566760917374;pred['UAH']['WMZ']=new Array ();pred['UAH']['WMZ'][1]=0.01;pred['UAH']['WMZ'][2]=0.02;pred['UAH']['WMZ'][3]=0.03;courses['UAH']['WMU']=1;pred['UAH']['WMU']=new Array ();pred['UAH']['WMU'][1]=0.01;pred['UAH']['WMU'][2]=0.03;pred['UAH']['WMU'][3]=0.03;courses['UAH']['WME']=0.093240093240093;courses['UAH']['WMR']=3.7313432835821;pred['UAH']['WMR']=new Array ();pred['UAH']['WMR'][1]=0.01;pred['UAH']['WMR'][2]=0.02;pred['UAH']['WMR'][3]=0.02;courses['UAH']['P24UAH']=1;courses['UAH']['P24USD']=0.12566760917374;courses['UAH']['UAH']=1;courses['UAH']['MCVUAH']=1;courses['UAH']['MCVUSD']=0.12566760917374;courses['UAH']['MCVRUR']=3.7313432835821;courses['RUR']=new Array ();pred['RUR']=new Array ();courses['RUR']['UAH']=0.268;courses['RUR']['USD']=0.033678919258561;courses['RUR']['EUR']=0.024988344988345;courses['EUR']=new Array ();pred['EUR']=new Array ();courses['EUR']['UAH']=10.725;courses['EUR']['USD']=1.3477851083883;courses['EUR']['RUR']=40.018656716418;courses['WMZ']=new Array ();pred['WMZ']=new Array ();courses['WMZ']['WMU']=7.7265580019113;courses['WMZ']['WMR']=29.981089622679;courses['WMZ']['WME']=0.75156327850431;courses['WMZ']['WMZ']=1;courses['WMZ']['P24UAH']=7.9575;pred['WMZ']['P24UAH']=new Array ();pred['WMZ']['P24UAH'][1]=0.002;pred['WMZ']['P24UAH'][2]=0.003;pred['WMZ']['P24UAH'][3]=0.004;courses['WMZ']['P24USD']=1;pred['WMZ']['P24USD']=new Array ();pred['WMZ']['P24USD'][1]=0.002;pred['WMZ']['P24USD'][2]=0.005;pred['WMZ']['P24USD'][3]=0.007;courses['WMZ']['USD']=1;pred['WMZ']['USD']=new Array ();pred['WMZ']['USD'][1]=0.003;pred['WMZ']['USD'][2]=0.006;pred['WMZ']['USD'][3]=0.009;courses['WMZ']['UAH']=7.9575;pred['WMZ']['UAH']=new Array ();pred['WMZ']['UAH'][1]=0.002;pred['WMZ']['UAH'][2]=0.004;pred['WMZ']['UAH'][3]=0.006;courses['WMZ']['MCVUAH']=7.9575;courses['WMZ']['MCVUSD']=1;courses['WMZ']['MCVRUR']=29.692164179104;courses['WMU']=new Array ();pred['WMU']=new Array ();courses['WMU']['WMZ']=0.1294237356081;courses['WMU']['WME']=0.096263227157776;courses['WMU']['WMR']=3.9040628198878;courses['WMU']['WMU']=1;courses['WMU']['P24UAH']=1;pred['WMU']['P24UAH']=new Array ();pred['WMU']['P24UAH'][1]=0.001;pred['WMU']['P24UAH'][2]=0.004;pred['WMU']['P24UAH'][3]=0.004;courses['WMU']['P24USD']=0.12566760917374;pred['WMU']['P24USD']=new Array ();pred['WMU']['P24USD'][1]=0.002;pred['WMU']['P24USD'][2]=0.006;pred['WMU']['P24USD'][3]=0.01;courses['WMU']['USD']=0.12566760917374;courses['WMU']['UAH']=1;pred['WMU']['UAH']=new Array ();pred['WMU']['UAH'][1]=0.005;pred['WMU']['UAH'][2]=0.01;pred['WMU']['UAH'][3]=0.015;courses['WMU']['MCVUAH']=1;courses['WMU']['MCVUSD']=0.12566760917374;courses['WMU']['MCVRUR']=3.7313432835821;courses['WMR']=new Array ();pred['WMR']=new Array ();courses['WMR']['WMZ']=0.033354358116576;pred['WMR']['WMZ']=new Array ();pred['WMR']['WMZ'][1]=0.001;pred['WMR']['WMZ'][2]=0.002;pred['WMR']['WMZ'][3]=0.003;courses['WMR']['WME']=0.025091108830231;courses['WMR']['WMU']=0.25614341933892;courses['WMR']['WMR']=1;courses['WMR']['P24UAH']=0.268;courses['WMR']['P24USD']=0.033678919258561;courses['WMR']['USD']=0.033678919258561;pred['WMR']['USD']=new Array ();pred['WMR']['USD'][1]=0.006;pred['WMR']['USD'][3]=0.009;courses['WMR']['UAH']=0.268;courses['WMR']['MCVUAH']=0.268;courses['WMR']['MCVUSD']=0.033678919258561;courses['WMR']['MCVRUR']=1;courses['WME']=new Array ();pred['WME']=new Array ();courses['WME']['WMZ']=1.3305599523038;courses['WME']['WMU']=10.388182793425;courses['WME']['WMR']=39.854755195002;courses['WME']['WME']=1;courses['WME']['P24UAH']=10.725;courses['WME']['P24USD']=1.3477851083883;courses['WME']['USD']=1.3477851083883;courses['WME']['UAH']=10.725;courses['WME']['MCVUAH']=10.725;courses['WME']['MCVUSD']=1.3477851083883;courses['WME']['MCVRUR']=40.018656716418;courses['P24UAH']=new Array ();pred['P24UAH']=new Array ();courses['P24UAH']['WMZ']=0.12566760917374;pred['P24UAH']['WMZ']=new Array ();pred['P24UAH']['WMZ'][1]=0.002;pred['P24UAH']['WMZ'][2]=0.007;pred['P24UAH']['WMZ'][3]=0.015;courses['P24UAH']['WMU']=1;pred['P24UAH']['WMU']=new Array ();pred['P24UAH']['WMU'][1]=0.002;pred['P24UAH']['WMU'][2]=0.006;pred['P24UAH']['WMU'][3]=0.014;courses['P24UAH']['WME']=0.093240093240093;courses['P24UAH']['WMR']=3.7313432835821;courses['P24UAH']['P24UAH']=1;courses['P24UAH']['P24USD']=0.12566760917374;courses['P24UAH']['USD']=0.12566760917374;courses['P24UAH']['UAH']=1;courses['P24UAH']['MCVUAH']=1;courses['P24UAH']['MCVUSD']=0.12566760917374;courses['P24UAH']['MCVRUR']=3.7313432835821;courses['P24USD']=new Array ();pred['P24USD']=new Array ();courses['P24USD']['WMZ']=1;pred['P24USD']['WMZ']=new Array ();pred['P24USD']['WMZ'][1]=0.004;pred['P24USD']['WMZ'][2]=0.007;pred['P24USD']['WMZ'][3]=0.01;courses['P24USD']['WMU']=7.9575;courses['P24USD']['WME']=0.74195804195804;courses['P24USD']['WMR']=29.692164179104;pred['P24USD']['WMR']=new Array ();pred['P24USD']['WMR'][1]=0.002;pred['P24USD']['WMR'][2]=0.006;pred['P24USD']['WMR'][3]=0.01;courses['P24USD']['P24UAH']=7.9575;courses['P24USD']['P24USD']=1;courses['P24USD']['USD']=1;courses['P24USD']['UAH']=7.9575;courses['P24USD']['MCVUAH']=7.9575;courses['P24USD']['MCVUSD']=1;courses['P24USD']['MCVRUR']=29.692164179104;courses['MCVUAH']=new Array ();pred['MCVUAH']=new Array ();courses['MCVUAH']['WMZ']=0.12566760917374;courses['MCVUAH']['WMU']=1;pred['MCVUAH']['WMU']=new Array ();pred['MCVUAH']['WMU'][1]=0.005;pred['MCVUAH']['WMU'][2]=0.01;pred['MCVUAH']['WMU'][3]=0.015;courses['MCVUAH']['WME']=0.093240093240093;pred['MCVUAH']['WME']=new Array ();pred['MCVUAH']['WME'][1]=0.005;pred['MCVUAH']['WME'][2]=0.01;pred['MCVUAH']['WME'][3]=0.015;courses['MCVUAH']['WMR']=3.7313432835821;courses['MCVUAH']['P24UAH']=1;courses['MCVUAH']['P24USD']=0.12566760917374;courses['MCVUAH']['USD']=0.12566760917374;courses['MCVUAH']['UAH']=1;courses['MCVUAH']['MCVUAH']=1;courses['MCVUAH']['MCVUSD']=0.12566760917374;courses['MCVUAH']['MCVRUR']=3.7313432835821;courses['MCVUSD']=new Array ();pred['MCVUSD']=new Array ();courses['MCVUSD']['WMZ']=1;pred['MCVUSD']['WMZ']=new Array ();pred['MCVUSD']['WMZ'][1]=0.005;pred['MCVUSD']['WMZ'][2]=0.01;pred['MCVUSD']['WMZ'][3]=0.015;courses['MCVUSD']['WMU']=7.9575;pred['MCVUSD']['WMU']=new Array ();pred['MCVUSD']['WMU'][1]=0.005;pred['MCVUSD']['WMU'][2]=0.01;pred['MCVUSD']['WMU'][3]=0.015;courses['MCVUSD']['WME']=0.74195804195804;pred['MCVUSD']['WME']=new Array ();pred['MCVUSD']['WME'][1]=0.005;pred['MCVUSD']['WME'][2]=0.01;pred['MCVUSD']['WME'][3]=0.015;courses['MCVUSD']['WMR']=29.692164179104;pred['MCVUSD']['WMR']=new Array ();pred['MCVUSD']['WMR'][1]=0.005;pred['MCVUSD']['WMR'][2]=0.01;pred['MCVUSD']['WMR'][3]=-0.21;courses['MCVUSD']['P24UAH']=7.9575;courses['MCVUSD']['P24USD']=1;courses['MCVUSD']['USD']=1;courses['MCVUSD']['UAH']=7.9575;courses['MCVUSD']['MCVUAH']=7.9575;courses['MCVUSD']['MCVUSD']=1;courses['MCVUSD']['MCVRUR']=29.692164179104;courses['MCVRUR']=new Array ();pred['MCVRUR']=new Array ();courses['MCVRUR']['WMZ']=0.033678919258561;pred['MCVRUR']['WMZ']=new Array ();pred['MCVRUR']['WMZ'][1]=0.005;pred['MCVRUR']['WMZ'][2]=0.01;pred['MCVRUR']['WMZ'][3]=0.015;courses['MCVRUR']['WMU']=0.268;pred['MCVRUR']['WMU']=new Array ();pred['MCVRUR']['WMU'][1]=0.005;pred['MCVRUR']['WMU'][2]=0.01;pred['MCVRUR']['WMU'][3]=0.015;courses['MCVRUR']['WME']=0.024988344988345;pred['MCVRUR']['WME']=new Array ();pred['MCVRUR']['WME'][1]=0.01;pred['MCVRUR']['WME'][2]=0.02;pred['MCVRUR']['WME'][3]=0.02;courses['MCVRUR']['WMR']=1;pred['MCVRUR']['WMR']=new Array ();pred['MCVRUR']['WMR'][1]=0.01;pred['MCVRUR']['WMR'][2]=0.015;pred['MCVRUR']['WMR'][3]=0.017;courses['MCVRUR']['P24UAH']=0.268;courses['MCVRUR']['P24USD']=0.033678919258561;courses['MCVRUR']['USD']=0.033678919258561;courses['MCVRUR']['UAH']=0.268;courses['MCVRUR']['MCVUAH']=0.268;courses['MCVRUR']['MCVUSD']=0.033678919258561;courses['MCVRUR']['MCVRUR']=1;
+var C=0;
+var course=0;
+var ii=0;
+var i=0;
+var money=new Array ();
+var help=new Array ();
+var WM_amount_r=new Array ();
+money['WMZ']=new Array;
+money['WMU']=new Array;
+money['WMR']=new Array;
+money['WME']=new Array;
+money['USD']=new Array;
+money['UAH']=new Array;
+money['P24UAH']=new Array;
+money['P24USD']=new Array;
+money['MCVUAH']=new Array;
+money['MCVUSD']=new Array;
+money['MCVRUR']=new Array;
+money['WMU']['USD']=1.035;money['WMU']['WMR']=1.027;money['WMU']['WMZ']=1.029;money['WMU']['WME']=1.03;money['WMU']['P24USD']=1.045;money['WMU']['UAH']=1.04;money['WMU']['P24UAH']=1.022;money['WMZ']['USD']=1.04;money['WMZ']['WMR']=1.013;money['WMZ']['WME']=1.04;money['WMZ']['WMU']=1.019;money['WMZ']['P24UAH']=1.043;money['WMZ']['P24USD']=1.034;money['WMZ']['UAH']=1.045;money['WME']['WMR']=1.035;money['WME']['WMZ']=1.035;money['WME']['WMU']=1.028;money['WME']['UAH']=1.045;money['WME']['P24UAH']=1.063;money['WME']['P24USD']=1.065;money['USD']['WMZ']=1.01;money['USD']['WMU']=1.02;money['USD']['WMR']=1;money['WMR']['WMZ']=1.02;money['WMR']['WME']=1.02;money['WMR']['WMU']=1.035;money['WMR']['P24UAH']=1.086;money['WMR']['P24USD']=1.075;money['WMR']['UAH']=1.12;money['WMR']['USD']=1.1;money['UAH']['WMR']=0.98;money['UAH']['WMZ']=1.03;money['UAH']['WMU']=1.03;money['UAH']['WME']=1.03;money['P24UAH']['WMU']=1.014;money['P24UAH']['WMZ']=1.015;money['P24UAH']['WMR']=0.965;money['P24UAH']['WME']=1.02;money['P24USD']['WMZ']=1.012;money['P24USD']['WMU']=1.02;money['P24USD']['WMR']=1.02;money['MCVUAH']['WMU']=1.035;money['MCVUAH']['WMZ']=1.04;money['MCVUAH']['WMR']=1.04;money['MCVUAH']['WME']=1.04;money['MCVUSD']['WMZ']=1.04;money['MCVUSD']['WMR']=1.04;money['MCVUSD']['WME']=1.04;money['MCVUSD']['WMU']=1.04;money['MCVRUR']['WMR']=1.03;money['MCVRUR']['WMZ']=1.035;money['MCVRUR']['WME']=1.04;money['MCVRUR']['WMU']=1.04;
+money['WMZ']['WMZ']=0;
+money['WMU']['WMU']=0;
+money['WMR']['WMR']=0;
+money['WME']['WME']=0;
+money['USD']['USD']=0;
+money['UAH']['UAH']=0;
+money['P24USD']['P24USD']=0;
+money['P24UAH']['P24UAH']=0;
+money['MCVUAH']['MCVUAH']=0;
+money['MCVUSD']['MCVUSD']=0;
+money['MCVRUR']['MCVRUR']=0;
+WM_amount_r['WMZ']="Резерв: 5199.64 Webmoney WMZ";
+help['WMZ']="";
+WM_amount_r['WMU']="Резерв: 3628.64 Webmoney WMU";
+help['WMU']="";
+WM_amount_r['WMR']="Резерв: 7035.4 Webmoney WMR";
+help['WMR']="";
+WM_amount_r['WME']="Резерв: 29.96 Webmoney WME";
+help['WME']="";
+WM_amount_r['USD']="";
+help['USD']="";
+WM_amount_r['UAH']="Резерв: 0 Наличная гривна";
+help['UAH']="";
+WM_amount_r['P24USD']="Резерв: 0 Приватбанк USD";
+help['P24USD']="";
+WM_amount_r['P24UAH']="Резерв: 25939.24 Приватбанк UAH";
+help['P24UAH']="";
+WM_amount_r['MCVUSD']="Резерв: 0 MasterCard/VISA USD";
+help['MCVUSD']="";
+WM_amount_r['MCVUAH']="Резерв: 0 MasterCard/VISA UAH";
+help['MCVUAH']="";
+WM_amount_r['MCVRUR']="";
+help['MCVRUR']="";
+var t = new Array ();
+WM_amount_r[1]="";
+WM_amount_r[2]="";
+WM_amount_r[3]="";
+help[1]="";
+help[2]="";
+help[3]="";
+help['CARDUAH']="";
+help['MCVUAH']="";
+help['P24UAH']='<img src="images/question.gif" width="11" height="11" hspace="0" vspace="0" border="0" title="Если сумма заявки не превышает указанный резерв, средства будут переведены Вам в течении 3-х минут. Безусловно Вы можете указывать бОльшую сумму на вывод, чем фактический резерв по выбранному направлению." />';
+
+help['P24USD']=help['P24UAH'];
+
+function CheckDiscount (val, curr, course)
+{	
+	var Range=val*course;
+	if ( pred[d.$("moneyIn").value][d.$("moneyOut").value]==undefined )	{
+		//alert(";;;");
+		if (Range<predel[1]) {
+			if (Range*1.001>predel[1]){return 0.0011}
+			return 0}
+		if (Range>predel[1] && Range<predel[2]) {
+		if (Range*1.002>predel[2]){return 0.002}
+			return 0.001}
+		if (Range>predel[2] && Range<predel[3]) {
+			if (Range*1.003>predel[3]){return 0.003}
+			return 0.002}
+		if (Range>predel[3]) {return 0.003;}
+	}else{
+		t[1]=pred[d.$("moneyIn").value][d.$("moneyOut").value][1];
+		t[2]=pred[d.$("moneyIn").value][d.$("moneyOut").value][2];
+		t[3]=pred[d.$("moneyIn").value][d.$("moneyOut").value][3];
+		
+		if (Range<predel[1]) {
+			if (Range*(1+t[1])>predel[1]){return t[1]+0.0001}
+			return 0}
+		if (Range>predel[1] && Range<predel[2]) {
+		if (Range*(1+t[2])>predel[2]){return t[2]}
+			return t[1]}
+		if (Range>predel[2] && Range<predel[3]) {
+			if (Range*(1+t[3])>predel[3]){return t[3]}
+			return t[2]}
+		if (Range>predel[3]) {return t[3];}
+	}
+}
+
+function sum2USD(num)
+{
+	mIn=d.$("moneyIn").value;
+	mOut=d.$("moneyOut").value;
+	if ((num.id=="SumIn") && (mIn=="WMU" || mIn=="UAH" || mIn=="MCVUAH" || mIn=="P24UAH")) {return num.value/courses['USD']['UAH'];}
+	if ((num.id=="SumIn") && (mIn=="WMR")) {return num.value/courses['USD']['RUR'];}	
+	if ((num.id=="SumIn") && (mIn=="WME")) {return num.value/courses['USD']['EUR'];}	
+	if ((num.id=="SumOut") && (mOut=="WMU" || mOut=="UAH" || mOut=="NSMEP" || mOut=="P24UAH")) {return num.value/courses['USD']['UAH'];}
+	if ((num.id=="SumOut") && (mOut=="WMR")) {return num.value/courses['USD']['RUR'];}	
+	if ((num.id=="SumOut") && (mOut=="WME")) {return num.value/courses['USD']['EUR'];}	
+	return num.value;
+}
+function CheckSumm(num,course,currency){
+	C1=d.$("moneyIn").value;
+	C2=d.$("moneyOut").value;
+	C=courses[d.$("moneyIn").value][d.$("moneyOut").value];
+
+	if (num.id=='SumIn') {return num.value*(1+CheckDiscount(sum2USD(num),C, course))*C/course;}
+	if (num.id=='SumOut') {return num.value/C*course/(1+CheckDiscount(sum2USD(num),C, course));}
+
+
+ }
+ 
+ 
+ function makechange() {
+	if ( money[d.$("moneyIn").value][d.$("moneyOut").value]==undefined )	 {
+		alert("Направление обмена не поддерживается");
+
+	}
+	 
+	 
+	if (d.$("moneyOut").value != 'WMZ' || d.$("moneyOut").value != 'WMU' || d.$("moneyOut").value != 'WMR' || d.$("moneyOut").value != 'WME') {
+	if ( d.$("moneyIn").value == 'WMZ' && parseFloat(d.$("SumIn").value) < 1 ) {
+     alert("Минимальная сумма обмена 1 WMZ");return(false);}
+	if ( d.$("moneyIn").value == 'WMU' && parseFloat(d.$("SumIn").value) < 5 ) {
+     alert("Минимальная сумма обмена 5 WMU");return(false);}
+	if ( d.$("moneyIn").value == 'WMR' && parseFloat(d.$("SumIn").value) < 30 ) {
+     alert("Минимальная сумма обмена 301 WMR");alert(event);return(false);}
+	if ( d.$("moneyIn").value == 'WME' && parseFloat(d.$("SumIn").value) < 1 ) {
+     alert("Минимальная сумма обмена 1 WME");return(false);}
+    if ( d.$("moneyIn").value == 'WMZ' && parseFloat(d.$("SumIn").value) > 10000 ) {
+     alert("Для обмена более 10000 WMZ свяжитесь с администрацией. ");return(false);}
+	if ( d.$("moneyIn").value == 'WMU' && parseFloat(d.$("SumIn").value) > 70000 ) {
+     alert("Для обмена более 70000 WMU свяжитесь с администрацией.");return(false);}
+	if ( d.$("moneyIn").value == 'WMR' && parseFloat(d.$("SumIn").value) > 200000 ) {
+     alert("Для обмена более 200000 WMR свяжитесь с администрацией.");return(false);}
+	if ( d.$("moneyIn").value == 'WME' && parseFloat(d.$("SumIn").value) > 10000 ) {
+     alert("Для обмена более 10000 WME свяжитесь с администрацией.");return(false);}
+	}
+	
+    if ( d.$("moneyOut").value == 'WMZ' && parseFloat(d.$("SumOut").value) > 5199.64) {
+     alert("Для обмена более 5199.64 WMZ свяжитесь с администрацией. ");return(false);}
+		if ( d.$("moneyOut").value == 'WMR' && parseFloat(d.$("SumOut").value) > 7035.4 ) {
+     alert("Для обмена более 7035.4 WMR свяжитесь с администрацией.");return(false);}
+	if ( d.$("moneyOut").value == 'WME' && parseFloat(d.$("SumOut").value) > 29.96 ) {
+     alert("Для обмена более 29.96 WME свяжитесь с администрацией.");return(false);}
+
+
+
+
+	if (d.$("moneyOut").value != 'USD' || d.$("moneyOut").value != 'CARDUAH' || d.$("moneyOut").value != 'UAH' || d.$("moneyOut").value != 'P24UAH' || d.$("moneyOut").value != 'P24USD') {
+	if ( (d.$("moneyIn").value == 'USD' || d.$("moneyIn").value == 'P24USD') && parseFloat(d.$("SumIn").value) < 25 ) {
+     alert("Минимальная сумма обмена 50 USD");return(false);}
+	if ( (d.$("moneyIn").value == 'UAH' || d.$("moneyIn").value == 'P24UAH' || d.$("moneyIn").value == 'MCVUAH') && parseFloat(d.$("SumIn").value) < 9 ) {
+     alert("Минимальная сумма обмена 25 гривен");return(false);}
+    if ( (d.$("moneyIn").value == 'USD' || d.$("moneyIn").value == 'P24USD') && parseFloat(d.$("SumIn").value) > 10000 ) {
+     alert("Для обмена более 10000 USD свяжитесь с администрацией. ");return(false);}
+	if ( (d.$("moneyIn").value == 'UAH' || d.$("moneyIn").value == 'P24UAH') && parseFloat(d.$("SumIn").value) > 70000 ) {
+     alert("Для обмена более 70000 гривен свяжитесь с администрацией.");return(false);}
+	}
+	if ( (d.$("moneyOut").value == 'USD' || d.$("moneyOut").value == 'P24USD') && parseFloat(d.$("SumOut").value) < 8 ) {
+     alert("Минимальная сумма обмена 50 USD");return(false);}
+	if ( (d.$("moneyOut").value == 'UAH' || d.$("moneyOut").value == 'P24UAH' || d.$("moneyOut").value == 'CARDUAH') && parseFloat(d.$("SumOut").value) < 9 ) {
+     alert("Минимальная сумма обмена 25 гривен");return(false);}
+
+	};
+</script>
+<script type="text/javascript" src="index_files/fun.js"></script>
+<script src="index_files/main.js" type="text/javascript"></script>
+
+
+<script language="javascript">
+function printcourse(){
+	//if (C==1) {C3=''} else {C3=" * "+round3(C)}
+	dis=CheckDiscount(sum2USD(document.forms.exchange.SumIn),C, course);
+	d.$("prcourse").innerHTML= "<div align='left'><b>1 " + 
+	d.$("moneyIn").options[d.$("moneyIn").options.selectedIndex].text + 	"</b> " + " > " + " <b>"+ round3(C/(money[d.$("moneyIn").value][d.$("moneyOut").value]-dis))+ " "+ 
+	d.$("moneyOut").options[d.$("moneyOut").options.selectedIndex].text + 	"</b></div><div align='left'><b>" + round3(1/(C/(money[d.$("moneyIn").value][d.$("moneyOut").value]-dis)))+ " " +
+	d.$("moneyIn").options[d.$("moneyIn").options.selectedIndex].text + 	"</b> " + " > " + " <b>"+  " 1 "+ 
+	d.$("moneyOut").options[d.$("moneyOut").options.selectedIndex].text + 	"</b></div>";
+			d.$("amount").innerHTML=WM_amount_r[d.$("moneyOut").value];
+		d.$("help").innerHTML=help[d.$("moneyOut").value];
+	}  
+
+</script>
+        
+	</head><div firebugversion="1.5.0" style="display: none;" 
+id="_firebugConsole"></div><body onload="start();">
+	    <div class="wrapper">
+            <div class="wrapper-inn">
+
+                <div class="header clear">
+                    <a href="http://game.obmenov.com/" class="logo"></a>
+                    <div class="auth">
+                        <form action="http://obmenov.com/login.php" 
+method="post">
+                            <div class="form-col1">
+                                <input name="user" 
+onfocus="if(this.value=='Логин') this.value='';" 
+onblur="if(this.value=='') this.value='Логин';" value="Логин" 
+type="text">
+                                <input name="pass" 
+onfocus="if(this.value=='Пароль') this.value='';" 
+onblur="if(this.value=='') this.value='Пароль';" value="Пароль" 
+type="password">
+                            </div>
+                            <div class="form-col2">
+                                <input value="" type="submit">
+                            </div>
+                            <div class="form-col3">
+                                <p class="auth-reg">
+                                                                <a 
+href="http://obmenov.com/">Регистрация</a>
+                                                                </p>
+                                <p class="auth-discount">Ваша скидка: <a
+ href="#">0%</a></p>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <li><a href="http://obmenov.com/register.php">Регистрация</a></li>
+                        <li><a href="http://obmenov.com/prepaid.php">Магазин</a></li>
+                        <li><a href="http://obmenov.com/commission.php">Комиссия
+ и курсы обмена</a></li>
+                        <li><a 
+href="http://obmenov.com/partner_info.php">Партнерская программа</a></li>
+                        <li><a href="http://obmenov.com/faq.php">Ответы 
+на вопросы</a></li>
+                        <li><a href="http://forum.obmenov.com/">Форум</a></li>
+                        <li><a href="http://obmenov.com/abount.php">О 
+сервисе</a></li>
+                        <li><a href="http://obmenov.com/contacts.php">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="middle clear">
+
+                    <!-- Start left column -->
+                    					<div class="l-col">
+                        <div class="rotator">
+                            <a href="#"><img 
+src="index_files/rotator.jpg" alt="" height="119" width="198"></a>
+                        </div>
+                        <div class="aff">
+                            <h3>Партнерская программа</h3>
+                            <div class="aff-inn">
+                                <p>Зарегистрируйся сейчас и получай до 
+20% прибыли с обменов!<br>до 5 центов за клик!</p>
+                                <a href="#" class="aff-cab">Кабинет 
+партнера</a>
+                            </div>
+                        </div>
+                           
+ 		                        <div class="games">
+                            <h3>Игровая валюта</h3>
+                            <div class="game-banners clear">
+                            
+                            
+                            
+						<a href="http://obmenov.com/gamepay.php?game=125">
+        				<img title="Легенда: Наследие драконов (фео-медиант)" 
+alt="Легенда: Наследие драконов (фео-медиант)" id="g33" 
+src="index_files/legend_mediant.gif" border="0"></a>
+					 
+						<a href="http://obmenov.com/gamepay.php?game=8">
+        				<img title="ARENA: Dragon Age - Нор Лаед" alt="ARENA: Dragon
+ Age - Нор Лаед" id="g17" src="index_files/arena1.gif" border="0"></a>
+					 
+						<a href="http://obmenov.com/gamepay.php?game=54">
+        				<img title="PoolOnline (Онлайн бильярд)" alt="PoolOnline 
+(Онлайн бильярд)" id="g10" src="index_files/icon_pool.jpg" border="0"></a>
+					 
+						<a href="http://obmenov.com/gamepay.php?game=11">
+        				<img title="8-й день" alt="8-й день" id="g16" 
+src="index_files/p_8day.gif" border="0"></a>
+					 
+						<a href="http://obmenov.com/gamepay.php?game=150">
+        				<img title="Ботва 3" alt="Ботва 3" id="g40" 
+src="index_files/botva03.png" border="0"></a>
+					 
+						<a href="http://obmenov.com/gamepay.php?game=2351">
+        				<img title="Bloody world" alt="Bloody world" id="g19" 
+src="index_files/bw.gif" border="0"></a>
+					                             </div>
+                            <div class="game-pay">
+  								<form action="http://obmenov.com/gamepay.php" method="get" 
+id="gamepay" name="gamepay">
+    							 <select style="width: 200px;" id="projectid" name="game">
+    							 <option selected="selected" value="0">Оплатить игру 
+---------</option>
+						 	    <option value="0">-------------------------------------------</option>
+    							    							<option value="41">11x11 - Футбол</option>
+    							    							<option value="11">8-й день</option>
+    							    							<option value="8">ARENA: Dragon Age - Нор Лаед</option>
+    							    							<option value="9">ARENA: Dragon Age - Нулу Кадар</option>
+    							    							<option value="5">Berserk-Online</option>
+    							    							<option value="2351">Bloody world</option>
+    							    							<option value="16">Carnage</option>
+    							    							<option value="2377">Combats (Бойцовский клуб)</option>
+    							    							<option value="27">COSMICS: Галактические воины</option>
+    							    							<option value="53">FarLands</option>
+    							    							<option value="243">Granado Espada: Вызов Судьбы</option>
+    							    							<option value="107">Infinuum</option>
+    							    							<option value="97">Last Chaos</option>
+    							    							<option value="1555">oldБК (Old Combats)</option>
+    							    							<option value="247">Perfect World</option>
+    							    							<option value="54">PoolOnline (Онлайн бильярд)</option>
+    							    							<option value="236">TimeZero</option>
+    							    							<option value="12">World of Tides</option>
+    							    							<option value="127">Аллоды Онлайн</option>
+    							    							<option value="52">Ботва 1</option>
+    							    							<option value="59">Ботва 2</option>
+    							    							<option value="150">Ботва 3</option>
+    							    							<option value="49">Ганджубасовые войны</option>
+    							    							<option value="29">Герои: Возрождение</option>
+    							    							<option value="43">Гладиаторы</option>
+    							    							<option value="30">Десант: Рейдеры Мериона</option>
+    							    							<option value="13">Драйв@mail.ru</option>
+    							    							<option value="2">Жуки@mail.ru</option>
+    							    							<option value="42">Золотая бутса</option>
+    							    							<option value="14">Королевство</option>
+    							    							<option value="125">Легенда: Наследие драконов 
+(фео-медиант)</option>
+    							    							<option value="123">Легенда: Наследие драконов 
+(фэо-минор)</option>
+    							    							<option value="23">Легенда: Наследие драконов 
+(фэо-прайм)</option>
+    							    							<option value="34">Пара Па</option>
+    							    							<option value="234">Пиратия</option>
+    							    							<option value="3">Территория</option>
+    							    							<option value="26">Троецарствие@mail.ru</option>
+    							    							<option value="96">Фаор</option>
+    							    							</select> <!--a href="javascript:d.$('gamepay').submit()">&raquo;</a><br-->
+    							<p><a href="http://obmenov.com/game.php">Посмотреть все (38) »</a></p>
+    							</form>
+                            </div>
+                        </div>
+                        <div class="bank">
+                            <h3>Наш банк</h3>
+                            <div class="bank-inn">
+                                <table>
+                                    <col width="50%">
+                                    <col>
+                                    <col>
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <td>Ввод</td>
+                                            <td>Вывод</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="bank-wm">WMU</td>
+                                            <td>1.014</td>
+                                            <td>0.978</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bank-wm">WMZ</td>
+                                            <td>8.08</td>
+                                            <td>7.63</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bank-wm">WMR</td>
+                                            <td>0.259</td>
+                                            <td>0.247</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bank-wm">WME</td>
+                                            <td>10.94</td>
+                                            <td>10.089</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                                                
+                        <div class="random">
+                            <h3>Случайный товар</h3>
+                            <div class="random-inn">
+                                <table>
+                                    <col width="63%">
+                                    <col>
+                                    <col>
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <td>$</td>
+                                            <td>грн</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                        
+    <tr>
+                                            <td class="random-good">Интертелеком
+ 50<a href="http://game.obmenov.com/prepaid.php?pin=int">&gt;&gt;</a></td>
+                                            										<td>6.5</td>
+    										<td>49.9</td>
+    									    									 
+                                        </tr>
+                                                                        
+            <tr>
+                                            <td class="random-good">Билайн
+ 15 Украина<a href="http://game.obmenov.com/prepaid.php?pin=bee">&gt;&gt;</a></td>
+                                            										<td>2</td>
+    										<td>15</td>
+    									    									 
+                                        </tr>
+                                                                        
+            <tr>
+                                            <td class="random-good">Киевстар
+ 100<a href="http://game.obmenov.com/prepaid.php?pin=ks">&gt;&gt;</a></td>
+                                            										<td>13</td>
+    										<td>99.9</td>
+    									    									 
+                                        </tr>
+                                                                        
+            <tr>
+                                            <td class="random-good">Life
+ 100<a href="http://game.obmenov.com/prepaid.php?pin=life">&gt;&gt;</a></td>
+                                            										<td>13</td>
+    										<td>100</td>
+    									    									 
+                                        </tr>
+                                                                        
+            <tr>
+                                            <td class="random-good">Билайн
+ 60+3 Украина<a href="http://game.obmenov.com/prepaid.php?pin=bee">&gt;&gt;</a></td>
+                                            										<td>7.8</td>
+    										<td>59.9</td>
+    									    									 
+                                        </tr>
+                                                                        
+            
+                                    </tbody>
+                                </table>    
+                            </div>
+                        </div>
+                        <div class="support">
+                            <h3>Поддержка</h3>
+                            <p class="support-phone">+38 (04842) 2-30-89</p>
+                            <p class="support-phone">+38 (063) 0-151-005</p>
+							<p class="support-phone"><img src="index_files/email.gif" alt="" 
+height="11" width="123"></p>
+                            <p class="support-online">Онлайн поддержка 
+ICQ</p>
+                            <p class="support-icq">450-750-453 <img 
+src="index_files/icq-online.png" alt=""></p>
+                       </div>
+                    </div>
+                    <!-- End left column -->
+
+                    <!-- Start central column -->
+                    <div class="c-col">
+                        <div class="change">
+                            <h1>Обменов.ком - меняем шило, на мыло</h1>
+                            <div class="change-form">
+                                <form action="specification.php" 
+method="post" name="exchange" id="exchange" onsubmit="makechange();">
+                                    <fieldset>
+                                        <div class="form-line1 clear">
+                                            <div class="change-from">
+                                                <input 
+onfocus="if(this.value=='0') this.value='';" onblur="if(this.value=='') 
+this.value='0';" value="0" onkeyup="CheckInOutSumm(this);" name="SumIn" 
+id="SumIn" type="text">
+                                                                        
+            
+                                                <select 
+onchange="CheckInOutSumm(d.$('SumIn'));" name="moneyIn" id="moneyIn">
+                                                        												<option
+ value="1" style="color: rgb(153, 153, 153); font-weight: bold;">Электронные
+ валюты</option>
+        																								<option value="WMZ">Webmoney WMZ</option>
+																									<option value="WMU">Webmoney WMU</option>
+																									<option selected="selected" value="WMR">Webmoney
+ WMR</option>
+																									<option value="WME">Webmoney WME</option>
+												    												<option value="2" style="color: rgb(153, 
+153, 153); font-weight: bold;">Наличные валюты</option>
+        																								<option value="USD">USD</option>
+																									<option value="UAH">Наличная гривна</option>
+												    												<option value="3" style="color: rgb(153, 
+153, 153); font-weight: bold;">Банковские переводы</option>
+        																								<option value="P24USD">Приватбанк USD</option>
+																									<option value="P24UAH">Приватбанк UAH</option>
+																									<option value="MCVUSD">MasterCard/VISA USD</option>
+																									<option value="MCVUAH">MasterCard/VISA UAH</option>
+																									<option value="MCVRUR">MasterCard/VISA RUR</option>
+												   													
+                                                </select>
+                                            </div>
+                                            <p id="needtohave">На вашем 
+кошельке <strong>должно быть +0,8%: 
+                                            <span id="needIn">0.01</span>
+ (минимум)</strong></p>
+                                        </div>
+                                        <div class="form-line2 clear">
+                                            <div class="change-to">
+                                                                        
+                    <select onchange="CheckInOutSumm(d.$('SumOut'));" 
+name="moneyOut" id="moneyOut">
+                                                    										<option 
+value="1" style="color: rgb(153, 153, 153); font-weight: bold;">Электронные
+ валюты</option>
+        									
+											<option selected="selected" value="WMZ">Webmoney WMZ</option>
+											
+											<option value="WMU">Webmoney WMU</option>
+											
+											<option value="WMR">Webmoney WMR</option>
+											
+											<option value="WME">Webmoney WME</option>
+											    										<option value="2" style="color: rgb(153, 153, 
+153); font-weight: bold;">Наличные валюты</option>
+        									
+											<option value="USD">USD</option>
+											
+											<option value="UAH">Наличная гривна</option>
+											    										<option value="3" style="color: rgb(153, 153, 
+153); font-weight: bold;">Банковские переводы</option>
+        									
+											<option value="P24USD">Приватбанк USD</option>
+											
+											<option value="P24UAH">Приватбанк UAH</option>
+											                                                </select>
+                                                <input name="SumOut" 
+id="SumOut" onkeyup="CheckInOutSumm(this);" onfocus="if(this.value=='0')
+ this.value='';" onblur="if(this.value=='') this.value='0';" value="0" 
+type="text">
+                                                <p align="left"><span 
+id="amount">Резерв: 5199.64 Webmoney WMZ</span> <span id="help"></span>
+												<span id="prcourse"><div align="left"><b>1 Webmoney WMR</b> 
+ &gt;  <b>0.033 Webmoney WMZ</b></div><div align="left"><b>30.581 
+Webmoney WMR</b>  &gt;  <b> 1 Webmoney WMZ</b></div></span></p>
+                                            </div>
+                                           <table align="right"><tbody><tr><td
+ valign="top">
+                                           <p id="bank" style="color: 
+rgb(255, 255, 255);" align="right"></p>
+    	<p id="mess" style="color: rgb(255, 255, 255); display: none;" 
+align="right">
+		Операция с одинаковыми валютами <br>или направление обмена временно <br>не
+ поддерживается.</p>
+        									</td><td width="10"></td></tr></tbody></table>
+                                            
+                                        </div>
+                                        <input value="" 
+class="change-submit" type="submit">
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="intro">
+                            <h1>Новости Обменов.ком</h1>
+                                                            
+							
+                            <table cellspacing="5">
+                                                        <tbody><tr><td>
+                            <span class="otzyv-date">26 января 2010</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name">Вам нужно срочно купить электронные деньги?</span>
+                            
+                            <p>Нет ничего проще! Используя свою <strong><a
+ href="http://game.obmenov.com/commission.php?direction=in&amp;level=3">платежную
+ карту VISA или MasterCard</a></strong>, Вы получите средства на Ваш 
+кошелек в течение 5-10 минут в любое время дня и ночи! Естественно, что 
+чем больше сумма, тем ниже комиссия сервиса на эти, равно как и на 
+другие направления обмена. Мы прнимаем платежи в 3-х валютах: в долларах
+ США, российских рублях и украинской гривне.</p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">21 января 2010</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name">К услугам сервиса добавлен автоматический ввод 
+средств через систему Приват24.</span>
+                            
+                            <p>Средства на Ваш счет поступают <strong>сразу</strong>
+ после оформления и оплаты заявки. Кроме того для перевода через систему
+ Приват24 Вам необходимо лишь авторизоваться, выбрать соответствующий 
+счет, с которого произойдет списание и подтвердить платеж. Все данные 
+уже будут подставлены в соответствующие поля.</p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">16 ноября 2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name">Рады Вам сообщить о введении автоматического вывода 
+средств на карту Приватбанка.</span>
+                            
+                            <p>Если сумма заявки не превышает указанный 
+на сайте резерв, вывод средств осуществляется <strong>в течении 3-х 
+минут</strong> после оформления и оплаты Вами заявки. Это новшество по 
+достоинству оценят те клиенты, которым наряду с низкой комиссией, 
+необходима быстрота получения средств на свой счет.</p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">25 сентября  2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>Для того, чтобы обмены и покупки в нашем 
+сервисе были еще более безопасными, обмен данными между нашим сервером и
+ клиентами теперь осуществляется по безопасному, шифрованному протоколу 
+https.</p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">29 августа  2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>Добавлены новые рекламные материалы в 
+раздел для <a href="https://obmenov.com/partner_banner.php">партнеров</a>,
+          в том числе и <a href="https://obmenov.com/exchform.php">форма
+ быстрого обмена</a>, для установки на Ваш сайт.</p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">30 июля  2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>Добавлена возможность обмена электронных 
+валют в автоматическом режиме. <br>
+Действуют скидки в зависимости от суммы обмена и накопительные скидки 
+для всех зарегистрированных клиентов. <br>
+<strong>Курсы обмена традиционно низкие</strong>, а обмен происходит 
+моментально.</p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">22 июля  2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>В продаже появились ваучеры оператора 
+мобильной связи МТС Украина номиналом 30 грн, традиционно дешевле 
+номинала.<br>Хочется отметить, что анализ предложений в Интернете 
+показал, что цены на ваучеры в нашем магазине одни из самых низких в 
+сети.</p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">19 июля  2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>Доступен файл экспорта курсов и резервов 
+валют нашего обменного пункта. Ссылка на файл и пояснения к формату 
+файла доступны в <a href="http://obmenov.com/partner.php">кабинете 
+партнера.</a></p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">17 июня  2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>В продаже появились ваучеры пополнения 
+счета оператора связи Peoplenet номиналом 25, 50 и 100 грн. 
+          <a href="https://obmenov.com/prepaid.php?pin=people">&gt;&gt;&gt;</a></p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">03 июня 2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>На базе сервиса Obmenov.com открыт 
+магазин ПИН-кодов мобильных операторов Украины, ваучеров Skype. Цены - 
+дешевле номинала.
+          <a href="https://obmenov.com/prepaid.php">&gt;&gt;&gt;</a></p>
+                            </td></tr>
+                                                        <tr><td>
+                            <span class="otzyv-date">02 июня 2009</span></td>
+                            <td width="10"></td><td> <span 
+class="otzyv-name"></span>
+                            
+                            <p>Наш сервис получил аттестат продавца и 
+регистрацию в каталоге Webmoney-ресурсов Megastock.</p>
+                            </td></tr>
+                                                        </tbody></table>
+                           <br>
+
+                            <ul>
+                                <li>Автоматический, мгновенный 
+ввод/вывод через систему Приват24.</li>
+                                <li>Продажа Webmoney посредством карт 
+VISA и MasterCard.</li>
+                                <li>При обмене сумм более 100, 1000 и 
+5000 долл. в эквиваленте, Вы получаете оптовую скидку, величина которой 
+зависит от направления обмена.</li>
+                                <li>Самые выгодные курсы валют на 
+онлайн-обмены.</li>
+                                <li>Автоматический, мгновенный способ 
+обмена электронных валют.</li>
+                                <li>Партнерская программа для владельцев
+ сайтов, которая позволяет зарабатывать при минимуме затрат и усилий. </li>
+                                <li>Все зарегистрированные пользователи 
+автоматически становятся участниками накопительной дисконтной программы и
+ получают скидку на комиссию сервиса Обменовком.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End central column -->
+
+                    <!-- Start right column -->
+                    <div class="r-col">
+                        <div class="rezerv">
+                            <div class="rezerv-inn">
+                                <h3>Резервы</h3>
+                                <p><span>Webmoney WMZ</span><b>5199.64</b></p>
+                                <p><span>Webmoney WMR</span><b>7035.4</b></p>
+                                <p><span>Webmoney WMU</span><b>3628.64</b></p>
+                                <p><span>Webmoney WME</span><b>29.96</b></p>
+                                <p><span>Приват24 грн.</span><b>25939.24</b></p>
+                                <p><span>Приват24 USD</span><b>0</b></p>
+                            </div>
+                        </div>
+                        <div class="directions">
+                            <h3>Популярные направления</h3>
+                            <div class="directions">
+                                <p><a 
+href="http://obmenov.com/exchange/WMR-P24UAH">Webmoney WMR &gt; 
+Приватбанк UAH</a></p>
+                                <p><a 
+href="http://obmenov.com/exchange/WMZ-P24UAH">Webmoney WMZ &gt; 
+Приватбанк UAH</a></p>
+                                <p><a 
+href="http://obmenov.com/exchange/WMZ-WMR">Webmoney WMZ &gt; Webmoney 
+WMR</a></p>
+                                <p><a 
+href="http://obmenov.com/exchange/WMR-WMZ">Webmoney WMU &gt; Webmoney 
+WMZ</a></p>
+                                <p><a 
+href="http://obmenov.com/exchange/WMR-WMZ">Webmoney WMZ &gt; Приватбанк 
+USD</a></p>
+                                <p><a 
+href="http://obmenov.com/exchange/WMR-WMZ">Webmoney WMU &gt; Webmoney 
+WMR</a></p>
+                                <p><a 
+href="http://obmenov.com/exchange/WMR-WMZ">Приватбанк UAH &gt; Webmoney 
+WMU</a></p>
+                            </div>
+                        </div>
+                                                <div class="otzyvy">
+                            <div class="otzyvy-inn">
+                                <h3>Отзывы<span>пользователей</span></h3>
+                                                                <div 
+class="otzyv">
+                                    <p class="otzyv-name">Имя: cobra</p>
+                                    <p class="otzyv-date">Дата: 
+2010-03-19 22:30</p>
+                                                                        <p
+ class="otzyv-text">9.31 WMU -&gt; 35.29 WMR</p>
+                                                                        <p
+ class="otzyv-text">сново радует скорость обмена и замечательный курс 
+:)))</p>
+                                </div>
+                                                                <div 
+class="otzyv">
+                                    <p class="otzyv-name">Имя: Сергей</p>
+                                    <p class="otzyv-date">Дата: 
+2010-03-19 21:32</p>
+                                                                        <p
+ class="otzyv-text">50.00 WMU -&gt; 189.65 WMR</p>
+                                                                        <p
+ class="otzyv-text">Все пришло быстро, спасибо за сервис.</p>
+                                </div>
+                                                                <div 
+class="otzyv">
+                                    <p class="otzyv-name">Имя: 
+SWMDbusiness </p>
+                                    <p class="otzyv-date">Дата: 
+2010-03-19 18:38</p>
+                                                                        <p
+ class="otzyv-text">160.00 WMU -&gt; 156.59 P24UAH</p>
+                                                                        <p
+ class="otzyv-text">Снимаю уже 4-й
+раз !!!
+Проблем не было!
+СПАСИБО!!!</p>
+                                </div>
+                                                                <div 
+class="otzyv">
+                                    <p class="otzyv-name">Имя: Николай</p>
+                                    <p class="otzyv-date">Дата: 
+2010-03-19 16:45</p>
+                                                                        <p
+ class="otzyv-text">39.62 WMU -&gt; 5 WMZ</p>
+                                                                        <p
+ class="otzyv-text">быстрый обмен. Супер!</p>
+                                </div>
+                                                                <div 
+class="otzyv">
+                                    <p class="otzyv-name">Имя: Юрий</p>
+                                    <p class="otzyv-date">Дата: 
+2010-03-19 15:25</p>
+                                                                        <p
+ class="otzyv-text">1984.13 WMR -&gt; 496.28 P24UAH</p>
+                                                                        <p
+ class="otzyv-text">Быстро, спасибо!!!</p>
+                                </div>
+                                                              </div>
+                            <a href="#" class="otzyvy-all">все (632)</a>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-inn">
+                                <div class="stat-attestat">
+                                    <p class="stat-seller">Аттестат 
+продавца</p>
+                                    <p class="stat-wmid">wmid 
+219391095990</p>
+                                </div>
+                                <!--p class="exchanges">Обменов: 9098</p>
+
+                                <p class="exchanges">Сегодня обменов: 28</p-->
+                            </div>
+                        </div>
+                    </div>                    <!-- End right column -->
+
+                </div>
+
+                <div class="footer">
+                    <div class="footer-t"></div>
+                    <div class="footer-b clear">
+                        <p class="copy">Copyright © 2010 <a 
+href="http://game.obmenov.com/">obmenov.com</a></p>
+                        <ul class="footer-nav">
+                             <li><a href="http://www.webmoney.ru/" 
+target="_blank"><img src="index_files/8831.gif" alt="принимаем Webmoney"
+ border="0" height="31" width="88"></a></li>
+<!-- HotLog -->
+<li><script type="text/javascript" language="javascript">
+hotlog_js="1.0"; hotlog_r=""+Math.random()+"&s=600140&im=127&r="+
+escape(document.referrer)+"&pg="+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script>
+<script type="text/javascript" language="javascript1.1">
+hotlog_js="1.1"; hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N");
+</script>
+<script type="text/javascript" language="javascript1.2">
+hotlog_js="1.2"; hotlog_r+="&wh="+screen.width+"x"+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?screen.colorDepth:screen.pixelDepth);
+</script>
+<script type="text/javascript" language="javascript1.3">
+hotlog_js="1.3";
+</script>
+<script type="text/javascript" language="javascript">
+hotlog_r+="&js="+hotlog_js;
+document.write('<a href="http://click.hotlog.ru/?600140" target="_top"><img '+
+'src="http://hit30.hotlog.ru/cgi-bin/hotlog/count?'+
+hotlog_r+'" border="0" width="88" height="31" alt="HotLog"><\/a>');
+</script><a href="http://click.hotlog.ru/?600140" target="_top"><img 
+src="index_files/count.gif" alt="HotLog" border="0" height="31" 
+width="88"></a>
+<noscript>
+<a href="http://click.hotlog.ru/?600140" target="_top"><img
+src="http://hit30.hotlog.ru/cgi-bin/hotlog/count?s=600140&amp;im=127" border="0"
+width="88" height="31" alt="HotLog"></a>
+</noscript></li>
+<!-- /HotLog -->
+<li>
+<!--WebMoney TOP--><script language="JavaScript"><!--
+document.write('<a href="http://top.owebmoney.ru" target=_blank>'+'<img src="https://top.owebmoney.ru/counter.php?site_id=1160&from='+escape(document.referrer)+'&host='+location.hostname+'&rand='+Math.random()+'" alt="WebMoney TOP" '+'border=0 width=88 height=31></a>')//--></script><a
+ href="http://top.owebmoney.ru/" target="_blank"><img 
+src="index_files/counter.png" alt="WebMoney TOP" border="0" height="31" 
+width="88"></a>
+<noscript><a href="http://top.owebmoney.ru" target=_blank>
+<img src="https://top.owebmoney.ru/counter.php?site_id=1160"
+width=88 height=31 alt="WebMoney TOP" border=0></a></noscript>
+<!--/WebMoney TOP-->
+</li>
+<li>
+<a 
+href="https://passport.webmoney.ru/asp/certview.asp?wmid=219391095990" 
+target="_blank"><img src="index_files/green_rus.gif" title="Здесь 
+находится аттестат нашего WM идентификатора 219391095990" border="0"></a></li>
+                            <!--li><a href="#">Соглашение</a></li>
+
+                            <li><a href="#">WM за SMS</a></li>
+
+                            <li><a href="#">Вопросы</a></li>
+
+                            <li><a href="#">Отзывы</a></li>
+
+                            <li><a href="#">Контакты</a></li-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+	    </div>
+
+	</body></html>

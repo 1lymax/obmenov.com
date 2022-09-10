@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_course_usd" value="name:id;datatype:int,name:min;datatype:real,name:max;datatype:real,name:date;datatype:datetime" />
+	<infoitem key="UD_DetailRS1" value="name:id;datatype:int,name:min;datatype:real,name:max;datatype:real,name:date;datatype:datetime" />
+	<infoitem key="UD_course_rur" value="name:id;datatype:int,name:min;datatype:real,name:max;datatype:real,name:date;datatype:datetime" />
+</info>

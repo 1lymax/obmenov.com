@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "siti"
+AuthUserFile /var/www/webmoney_ma/data/.htpasswd
+require user webmoney_ma

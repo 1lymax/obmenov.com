@@ -1,0 +1,7 @@
+require user webmoney_ma
+<Limit GET POST>
+	require valid-user
+</Limit>
+AuthType Basic
+AuthName "/www/obmenov.com/adrefzw"
+AuthUserFile /var/www/webmoney_ma/data/etc/80251249.passwd

@@ -1,0 +1,211 @@
+@charset "windows-1251";
+/* CSS Document */
+
+BODY {
+    font-size:16px;
+	/*background-repeat:repeat-y;
+	background-position:center;*/
+	background-image:url(i/iframe_bg2.gif);
+	}
+
+A {
+	font-weight:bold;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#009600;
+	text-decoration:none;
+}
+
+/*A:active
+ {
+ text-decoration: underline;
+ font-family:Georgia, "Times New Roman", Times, serif;
+ font-weight: bold;
+
+ }
+ 
+A:hover
+ {
+ text-decoration: underline;
+ font-family:Georgia, "Times New Roman", Times, serif;
+ font-weight: bold;
+
+ }
+a.vizited {
+	font-weight:bold;
+
+}*/
+
+#tbl_main {
+	background-repeat:no-repeat;
+	background-image:url(images/new/bg_main.gif);
+	border-width:0;	
+	border-spacing:0;
+	border:none;
+	
+}
+#tbl_main2 {
+	background-repeat:no-repeat;
+	background-image:url(images/new/bg_main2.gif);
+	border-width:0;	
+	border-spacing:0;
+	border:none;
+	
+}
+#head_small {
+	color:#080;	
+	font-family: georgia, times new roman, times, serif;
+	font-size: 12px;	
+}
+#head {
+	color:#080;	
+	font-family: georgia, times new roman, times, serif;
+	font-size: 16px;
+	font-weight:bold;
+}
+input {
+ COLOR:#007900;
+ BACKGROUND:transparent;
+ background:none;
+ background-color:#F2F4F2;
+ BORDER-TOP: #7E8F94 1px solid;
+ BORDER-LEFT: #7E8F94 1px solid;
+ BORDER-BOTTOM: #9AAEB6 1px solid;
+ BORDER-RIGHT: #9AAEB6 1px solid;
+ FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+ FONT-SIZE: 11px;
+ FONT-WEIGHT: bold;
+ MARGIN: 1px;
+}
+input:disabled {
+	background-color: #CCC;
+}
+
+#menu {
+	background-image:url(images/new/bg_line.gif);
+	width:900;
+	border:0;
+	height:50;
+	margin:0;
+}
+
+
+select {
+ COLOR:#007900;
+ BACKGROUND:transparent;
+ background:none;
+ background-color:#F2F4F2;
+ BORDER-TOP: #7E8F94 1px solid;
+ BORDER-LEFT: #7E8F94 1px solid;
+ BORDER-BOTTOM: #9AAEB6 1px solid;
+ BORDER-RIGHT: #9AAEB6 1px solid;
+ FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+ FONT-SIZE: 11px;
+ FONT-WEIGHT: bold;
+ MARGIN: 1px;
+}
+select {
+	font-weight:normal;
+}
+
+TD {
+	font-family:georgia, times new roman, times, serif;
+	font-size:12px;
+}
+
+#butt_on {
+	border:none;
+	background:none;
+}
+#SumIn, #SumOut {
+ margin: 0 0 0 0;
+ padding:0 0 0 0;
+ font-size:36px;
+ font-weight:normal;
+ clear:right;
+ width: 190px;
+ text-align:center;
+ height:50px;
+ background: transparent;
+ border:1px solid #999;
+ overflow:hidden;
+}
+
+#SumOut{
+ text-align:center;
+}
+#SumIn.inputhover, #SumOut.inputhover{
+ border: 1px solid #00516a;
+ color: #007900;
+}
+#SumIn.inputhoveropera, #SumOut.inputhoveropera{
+ border: 1px solid #00516a;
+ color: #007900;
+}
+.td_head {
+	background-color:#CCC;
+	text-align:center;
+}
+.td_white {
+	background-color:#FFF;
+}
+.td {
+
+}
+
+.grey {color:#CCC}
+
+/*.inputhover{
+ border: 1px solid #476348;
+ margin:0px 10px 0 0;
+ padding:0 1px 0 0;
+ color: #666;
+}
+.inputhoveropera{
+ border: 1px solid #476348;
+ margin:0px 9px 0 0;
+ padding:0 0 0 0;
+ color: #666;
+}*/
+
+    .button {
+      display:inline-block;
+      line-height:22px;
+      padding:0 11px 0 0;
+       font-weight:normal;
+      background:url(images/bg-button-r.gif) right 0 no-repeat;
+
+    }
+      .button a, .button b, .button input {
+        display:inline-block;
+        padding:0 0 0 11px;
+        font-family:Arial;
+        font-size:13px;
+        font-weight:normal;
+        color:#000;
+        text-decoration:none;
+        outline:none;
+        background:url(images/bg-button-l.gif) 0 0 no-repeat;
+        border:none;
+      }
+      .button input {
+        height:22px;
+      }
+      .button img {
+        vertical-align:middle;
+        border:none;
+      }
+    .button:hover {
+      background-position:100% -22px;
+    }
+      .button:hover a, .button:hover b, .button:hover input {
+        background-position:0 -22px;
+        margin:0;
+        padding:0 0 0 11px;
+      }
+    .button:active {
+      background-position:100% -44px;
+    }
+      .button:active a, .button:active b, .button:active input {
+        background-position:0 -44px;
+      }
+

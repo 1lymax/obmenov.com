@@ -1,0 +1,5 @@
+
+AuthType Basic
+AuthName "siti"
+AuthUserFile /sata1/home/users/webmoneyy/www/.htpasswd
+require user maxikuku

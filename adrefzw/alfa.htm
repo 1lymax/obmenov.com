@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>
+
+Интернет-банк "Альфа-Клик"
+</title>
+
+<script src="index2_data/boxover.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/detect_timezone.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/script1.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/keyboard.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/templates.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/dynaGroup.js" language="JavaScript" type="text/javascript"></script>
+<!--********************************************************************************-->
+
+<script src="index2_data/CalendarPopup.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/popup.js" language="JavaScript" type="text/javascript"></script>
+
+<!-- This prints out the default stylehseets used by the DIV style calendar.
+     Only needed if you are using the DIV style popup -->
+<script language="JavaScript" type="text/javascript">document.write(getCalendarStyles());</script><style>
+.cpYearNavigation,.cpMonthNavigation { background-color:#C0C0C0; text-align:center; vertical-align:center; text-decoration:none; color:#000000; font-weight:bold; }
+.cpDayColumnHeader, .cpYearNavigation,.cpMonthNavigation,.cpCurrentMonthDate,.cpCurrentMonthDateDisabled,.cpOtherMonthDate,.cpOtherMonthDateDisabled,.cpCurrentDate,.cpCurrentDateDisabled,.cpTodayText,.cpTodayTextDisabled,.cpText { font-family:arial; font-size:8pt; }
+TD.cpDayColumnHeader { text-align:right; border:solid thin #C0C0C0;border-width:0px 0px 1px 0px; }
+.cpCurrentMonthDate, .cpOtherMonthDate, .cpCurrentDate  { text-align:right; text-decoration:none; }
+.cpCurrentMonthDateDisabled, .cpOtherMonthDateDisabled, .cpCurrentDateDisabled { color:#D0D0D0; text-align:right; text-decoration:line-through; }
+.cpCurrentMonthDate, .cpCurrentDate { color:#000000; }
+.cpOtherMonthDate { color:#808080; }
+TD.cpCurrentDate { color:white; background-color: #C0C0C0; border-width:1px; border:solid thin #800000; }
+TD.cpCurrentDateDisabled { border-width:1px; border:solid thin #FFAAAA; }
+TD.cpTodayText, TD.cpTodayTextDisabled { border:solid thin #C0C0C0; border-width:1px 0px 0px 0px;}
+A.cpTodayText, SPAN.cpTodayTextDisabled { height:20px; }
+A.cpTodayText { color:black; }
+.cpTodayTextDisabled { color:#D0D0D0; }
+.cpBorder { border:solid thin #808080; }
+</style>
+
+<script language="JavaScript" type="text/javascript"> /*id="jscal1x"*/
+var cal1x = new CalendarPopup("calendar_div");
+initCalendar();
+
+function initCalendar(){
+    cal1x.setMonthNames("Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь");
+    cal1x.setTodayText("Сегодня");
+    cal1x.setWeekStartDay(1);
+    cal1x.setDayHeaders("ВС","ПН","ВТ","СР","ЧТ","ПТ","СБ");
+    cal1x.setGoToNextMonth("вперед"); 
+    cal1x.setGoToPrevMonth("назад"); 
+}
+
+function refreshCalendarObject(){
+    cal1x = new CalendarPopup("calendar_div");
+    initCalendar();
+}
+
+function callKeyboardHelp()
+{
+	help("html/help09.html#virtkey");
+}
+
+encodedURLForSpecialPurposes='ControllerServlet;jsessionid=0000DcpplV0OhbxCka-Ov8vQZXt:-1';
+</script>
+<!--********************************************************************************-->
+
+<!--  <LINK REL="stylesheet" HREF="style/default.css" TYPE="text/css" MEDIA="screen">-->
+<link rel="stylesheet" href="index2_data/CalendarPopup.css" type="text/css" media="screen">
+<link rel="stylesheet" href="index2_data/styles.css" type="text/css" media="screen">
+<link rel="stylesheet" href="index2_data/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="index2_data/popup.css" type="text/css" media="screen">
+<link rel="stylesheet" href="index2_data/jquery-ui.css" type="text/css" media="screen">
+<link rel="StyleSheet" href="index2_data/stamp.css" type="text/css" media="screen,print">
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body><div style="visibility: hidden; position: absolute; overflow: hidden; padding: 0px; width: 0px; left: 0px; top: 0px;" id="WzTtDiV"></div>
+<script src="index2_data/wz_dragdrop.js" language="JavaScript" type="text/javascript"></script>
+<div id="calendar_div" style="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></div><div style="position:absolute; visibility:hidden;">
+<form name="SortLink" method="POST" action="ControllerServlet;jsessionid=0000DcpplV0OhbxCka-Ov8vQZXt:-1">
+<input name="command" value="" type="hidden">
+<input name="custom1" value="" type="hidden">
+<input name="custom2" value="false" type="hidden">
+<input name="custom3" value="" type="hidden">
+<input name="sorting" value="" type="hidden">
+<input name="operID" value="" type="hidden">
+<input name="back_command" value="" type="hidden">
+<input name="back_custom1" value="" type="hidden">
+<input name="back_custom2" value="" type="hidden">
+<input name="back_custom3" value="" type="hidden">
+<input name="back_custom4" value="" type="hidden">
+<input name="back_custom5" value="" type="hidden">
+<input name="back_operID" value="" type="hidden">
+</form>
+
+<form name="PostLink" method="POST" action="ControllerServlet;jsessionid=0000DcpplV0OhbxCka-Ov8vQZXt:-1">
+<input name="command" value="" type="hidden">
+<input name="custom1" value="" type="hidden">
+<input name="custom2" value="" type="hidden">
+<input name="custom3" value="" type="hidden">
+<input name="custom4" value="" type="hidden">
+<input name="custom5" value="" type="hidden">
+<input name="operID" value="" type="hidden">
+<input name="filterString" value="" type="hidden">
+<input name="verificationGroupName" value="" type="hidden">
+<input name="back_command" value="" type="hidden">
+<input name="back_custom1" value="" type="hidden">
+<input name="back_custom2" value="" type="hidden">
+<input name="back_custom3" value="" type="hidden">
+<input name="back_custom4" value="" type="hidden">
+<input name="back_custom5" value="" type="hidden">
+<input name="back_operID" value="" type="hidden">
+
+<input name="saveTemplate" value="" type="hidden">
+<input name="paymentTemplateName" value="" type="hidden">
+
+<!--<INPUT type='hidden' name='clientPCInfo' value=''>-->
+
+</form>
+
+<script language="JavaScript" type="text/javascript">
+	function goBack(){
+	  post("", "", "", "", "", "", "");
+	}
+top.document.title = 'Интернет-банк "Альфа-Клик"';
+</script>
+</div>
+
+
+<script src="index2_data/wz_tooltip.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/tip_balloon.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/hintpopup.js" language="JavaScript" type="text/javascript"></script>
+<script src="index2_data/jquery.js" type="text/javascript"></script>
+
+<!-- removed because of size, used on specific page(s) only 
+<script src="script/jquery-ui.js" type="text/javascript"></script> -->
+
+
+<script language="JavaScript" type="text/javascript">
+	window.onload = init;
+	function init() {
+	  if (window.Event) {
+	    document.captureEvents(Event.MOUSEMOVE);
+	  }
+	  document.onmousemove = getCursorXY;
+	}
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+<!--
+cal1x.addDisabledDates(null,"04/20/2012");
+cal1x.addDisabledDates("07/21/2012",null);
+
+	function enablePeriodDateBoxes() {
+//		alert(document.forms["mainFrm"].startDate.visibility);
+		if(document.forms["mainFrm"].period.value==3) {
+			document.getElementById("datesArea").style.visibility='visible';		
+			document.getElementById("datesArea").style.display='block';
+//			document.forms["mainFrm"].startDate.disabled=false;
+//			document.forms["mainFrm"].endDate.disabled=false;
+			//document.forms["mainFrm"].startDate.value="";
+			//document.forms["mainFrm"].endDate.value="";
+//			document.forms["mainFrm"].startDate.readOnly=false;
+//			document.forms["mainFrm"].endDate.readOnly=false;
+//			document.forms["mainFrm"].startDate.style.visibility='visible';
+//			document.forms["mainFrm"].endDate.style.visibility='visible';
+		} else {
+			document.getElementById("datesArea").style.visibility='hidden';		
+			document.getElementById("datesArea").style.display='none';		
+//			document.forms["mainFrm"].startDate.disabled=true;
+//			document.forms["mainFrm"].endDate.disabled=true;
+//			document.forms["mainFrm"].startDate.value="";
+//			document.forms["mainFrm"].endDate.value="";
+		//	document.forms["mainFrm"].startDate.readOnly=true;
+		//	document.forms["mainFrm"].endDate.readOnly=true;
+//			document.forms["mainFrm"].startDate.style.visibility='hidden';
+//			document.forms["mainFrm"].endDate.style.visibility='hidden';
+		}		
+
+	switch(document.forms["mainFrm"].period.value){
+		case "0":
+			document.getElementById("periodRange").innerHTML = "&nbsp;&nbsp;19.07.2012 - 20.07.2012";
+			break;
+		case "1":
+			document.getElementById("periodRange").innerHTML = "&nbsp;&nbsp;13.07.2012 - 20.07.2012";
+			break;	
+		case "2":
+			document.getElementById("periodRange").innerHTML = "&nbsp;&nbsp;20.06.2012 - 20.07.2012";
+			break;
+		case "3": 
+			document.getElementById("periodRange").innerHTML = "";
+			break;
+		case "4": 
+			document.getElementById("periodRange").innerHTML = "&nbsp;&nbsp;20.04.2012 - 20.07.2012";
+			break;
+		default: 
+			document.getElementById("periodRange").innerHTML = "";
+		}
+	}
+        
+        function saveAsFunc(){
+            document.forms["mainFrm"].command.value="balancesMovements_exportAsFile";
+            
+            var reloadNeeded = false;
+            
+            // no data yet, reload needed before exporting
+            if ('true' != 'true'){
+                reloadNeeded = true;
+            }
+            
+            // checking for form changes
+            if ((document.forms["mainFrm"].accountNumber.value != '40817810008890002281') ||
+            (document.forms["mainFrm"].period.value != '3')){
+                reloadNeeded = true;
+            }
+            if (reloadNeeded == false && document.forms["mainFrm"].period.value == '3'){
+                if ((document.forms["mainFrm"].startDate.value != '19.07.2012') ||
+                (document.forms["mainFrm"].endDate.value != '19.07.2012') ){
+                    reloadNeeded = true;
+                }
+            }
+            
+            document.forms["mainFrm"].exportReloadNeeded.value= reloadNeeded ? "true" : "false";
+            //alert('reloadNeeded:'+document.forms["mainFrm"].exportReloadNeeded.value);
+            document.forms["mainFrm"].submit();        
+        }
+        
+        function periodSubmit(){
+            document.forms["mainFrm"].command.value="balancesMovements_filterVerify";
+            document.forms["mainFrm"].submit();        
+        }
+        
+-->
+</script>
+
+
+
+
+<script type="text/javascript">
+addMovableElement("ENDINGSESSIONBODYID");</script>
+<table class="main_container" border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody><tr>
+     <td valign="top">
+       <!-- top section -->
+       <table border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody><tr>
+           <td class="top_left"><a id="logo_linkID" href="javascript:%20void(0);" onclick="javascript:post('balances_list');return false;"><img src="index2_data/logo.gif" alt="Logo" height="120" width="200"></a></td>
+           <td class="top_right">
+             <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tbody><tr>
+                 <td class="red_background" width="35%">
+                   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tbody><tr>
+                       <td width="175"><img src="index2_data/logo2.gif" alt="" height="90" width="175"></td>
+                       <td align="center" width="100%"><img src="index2_data/logo3.gif" alt="" height="90" width="1"></td>
+                       <td width="114"><img src="index2_data/logo4.gif" alt="" height="90" width="114"></td>
+                     </tr>
+                   </tbody></table>
+                 </td>
+                 <td class="red_background" align="right" width="65%"><img src="index2_data/ppl.jpg" alt="" height="90" width="267"></td>
+               </tr>
+               <tr>
+                 <td colspan="2" class="top_menu">
+                   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tbody><tr>
+                       <td>Иван&nbsp;Субботин</td>
+                       <td width="35%">
+             <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tbody><tr>
+<td class="menu_item"><!-- unused hint: menu_second_hint --><img src="index2_data/s.gif" class="icon" alt="" align="middle" height="15" width="15"><a class="secondMenu" href="javascript:%20void(0);" onclick='javascript: post("messagesList_list"); return false;'>Новых Сообщений</a><span style="position: relative;top: 2px;"> (3)</span>&nbsp;&nbsp;</td>
+                             <td class="menu_item"><!-- unused hint: submenu_second1_hint --><img src="index2_data/icon_help.gif" class="icon" alt="" align="middle" height="15" width="15"><a class="secondMenu" id="secondMenu1" href="javascript:%20void(0);" onclick='javascript: help("html/help00.html");; return false;'>Помощь</a>&nbsp;&nbsp;</td>
+                             <td class="menu_item"><!-- unused hint: submenu_second2_hint --><img src="index2_data/icon_contacts.gif" class="icon" alt="" align="middle" height="15" width="15"><a class="secondMenu" id="secondMenu2" href="javascript:%20void(0);" onclick='javascript: help("html/help01.html#Contacts");; return false;'>Контакты</a>&nbsp;&nbsp;</td>
+                             <td class="menu_item"><!-- unused hint: submenu_second3_hint --><img src="index2_data/icon_index.gif" class="icon" alt="" align="middle" height="15" width="15"><a class="secondMenu" id="secondMenu3" href="javascript:%20void(0);" onclick='javascript: post("balances_list");; return false;'>На главную</a>&nbsp;&nbsp;</td>
+                             <td class="menu_item"><!-- unused hint: submenu_second4_hint --><img src="index2_data/icon_exit.gif" class="icon" alt="" align="middle" height="15" width="15"><a class="secondMenu" id="secondMenu4" href="javascript:%20void(0);" onclick='javascript: post("auth_logout");; return false;'>Выход</a>&nbsp;&nbsp;</td>
+               </tr>
+             </tbody></table>       
+        
+                       </td>
+                     </tr>
+                   </tbody></table>
+                 </td>
+               </tr><!-- here -->
+             </tbody></table>
+           </td>
+         </tr>
+       </tbody></table>
+       <!-- //top section -->
+
+       <!-- body -->
+       <table class="main_container" border="0" cellpadding="0" cellspacing="0" width="100%">
+       <!-- left menu -->
+         <tbody><tr>
+           <td class="main_left">
+       <div class="left_container">
+        <div class="plate_red"><!-- unused hint: bankApp.name.UpperCase_hint --><b>АЛЬФА-КЛИК</b></div>
+             <div class="list_container">
+               <div class="list_lightgray"><!-- unused hint: menu1_hint --><table>  <tbody><tr>    <td><a id="menu1" href="javascript:%20void(0);" onclick='javascript:  post("balances_list"); return false;'>Начало</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu2_hint --><table>  <tbody><tr>    <td><a id="menu2" href="javascript:%20void(0);" onclick='javascript:  post("balances_listMyAccounts"); return false;'>Мои счета</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table><div class="list_yellow"><table>  <tbody><tr>    <td><!-- unused hint: menu.2.1_hint --><a id="menu2.1" href="javascript:%20void(0);" onclick='javascript: post("accountDetail_accountDetailMyAccounts");; return false;'>Детальная информация</a></td>  </tr></tbody></table></div>
+<div class="list_yellow"><table>  <tbody><tr>    <td><!-- unused hint: menu.2.2_hint --><a id="menu2.2" href="javascript:%20void(0);" onclick='javascript: post("balancesMovements_myAccountsFilterPage");; return false;'>Выписка по счету</a></td>  </tr></tbody></table></div>
+ </div>
+               <div class="list_lightgray"><!-- unused hint: menu3_hint --><table>  <tbody><tr>    <td><a id="menu3" href="javascript:%20void(0);" onclick='javascript:  post("balances_listMyLoans"); return false;'>Мои кредиты</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu7_hint --><table>  <tbody><tr>    <td><a id="menu4" href="javascript:%20void(0);" onclick='javascript:  post("card_list"); return false;'>Мои карты</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu4_hint --><table>  <tbody><tr>    <td><a id="menu5" href="javascript:%20void(0);" onclick='javascript:  post("balances_listMyDeposits"); return false;'>Мои депозиты</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu14_hint --><table>  <tbody><tr>    <td><a id="menu6" href="javascript:%20void(0);" onclick='javascript:  post("goal_listRefresh"); return false;'>Мои цели</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu5_hint --><table>  <tbody><tr>    <td><a id="menu7" href="javascript:%20void(0);" onclick='javascript:  post("pathctrl_loadMenu1_onOperationsMainPage"); return false;'>Переводы</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu6_hint --><table>  <tbody><tr>    <td><a id="menu8" href="javascript:%20void(0);" onclick='javascript:  post("pathctrl_loadMenu1_onPaymentsMainPage"); return false;'>Оплата услуг и другие платежи</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu8_hint --><table>  <tbody><tr>    <td><a id="menu9" href="javascript:%20void(0);" onclick='javascript:  post("funds_list"); return false;'>Инвестиции</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu10_hint --><table>  <tbody><tr>    <td><a id="menu10" href="javascript:%20void(0);" onclick='javascript:  post("pathctrl_loadMenu1_onInsurancesMainPage"); return false;'>Страхование</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu11_hint --><table>  <tbody><tr>    <td><a id="menu11" href="javascript:%20void(0);" onclick='javascript:  post("MTPLInvoices_list"); return false;'>Оплата счетов</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu9_hint --><table>  <tbody><tr>    <td><a id="menu12" href="javascript:%20void(0);" onclick='javascript:  post("messagesList_list"); return false;'>Сообщения</a><a href="javascript:%20void(0);" onclick='javascript:  post("messagesList_list"); return false;'><span style="color:blue;text-decoration:none"> (<span style="color:red;text-decoration:none">3</span>)</span></a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table> </div>
+               <div class="list_lightgray"><!-- unused hint: menu13_hint --><table>  <tbody><tr>    <td><a id="menu13" href="javascript:%20void(0);" onclick='javascript:  post("DPPList_list"); return false;'>Специальные предложения</a>    </td>    <td style="padding-left: 3px;" valign="bottom"><img src="index2_data/new.gif" alt=""></td>  </tr></tbody></table> </div>
+             </div>
+       </div>
+        
+             <div class="left_container">
+               <div class="plate_green"><!-- unused hint: submenu_settings1_hint --><a id="settingsMenu1" href="javascript:%20void(0);" onclick='javascript:  post("client_settingsMainPage");; return false;' class="menu">Настройки</a></div>
+               <div class="list_container">
+<div class="list_lightgreen"><table>  <tbody><tr>    <td><!-- unused hint: submenu_settings2_hint --><a id="settingsMenu2" href="javascript:%20void(0);" onclick='javascript: post("client_profile");; return false;'>Мой профиль</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table></div><div class="list_lightgreen"><table>  <tbody><tr>    <td><!-- unused hint: submenu_settings3_hint --><a id="settingsMenu3" href="javascript:%20void(0);" onclick='javascript: post("client_changePassword");; return false;'>Смена пароля</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table></div><div class="list_lightgreen"><table>  <tbody><tr>    <td><!-- unused hint: submenu_settings4_hint --><a id="settingsMenu4" href="javascript:%20void(0);" onclick='javascript: post("client_templatesManagement", "init");; return false;'>Шаблоны</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table></div><div class="list_lightgreen"><table>  <tbody><tr>    <td><!-- unused hint: submenu_settings5_hint --><a id="settingsMenu5" href="javascript:%20void(0);" onclick='javascript: post("tokensManagement_list");; return false;'>Альфа-Ключ</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table></div><div class="list_lightgreen"><table>  <tbody><tr>    <td><!-- unused hint: submenu_settings6_hint --><a id="settingsMenu6" href="javascript:%20void(0);" onclick='javascript: post("SOList_list");; return false;'>Автоплатежи/Длительные поручения</a>    </td>    <td style="padding-left: 3px;" valign="bottom"></td>  </tr></tbody></table></div></div></div>             <div class="left_container_next">
+               <!-- unused hint: menu_connectElMoney.title_hint --><div class="plate_green"><a href='javascript:%20post("yandexBindingList_list");'>Электронные деньги</a></div>
+</div>
+             <div class="left_container_next">
+               <!-- unused hint: menu_connectAC.title_hint --><div class="plate_green"><a href='javascript:%20post("client_connectAC");'>Подключение<br>«Альфа-Чек»</a></div>
+</div>
+             <div class="left_container">
+               <!-- unused hint: menu_connectAM.title_hint --><div class="plate_green"><a href='javascript:%20post("client_connectAM");'>Подключение<br>«Альфа-Мобайл»</a></div>
+</div>
+<!-- unused hint: banner_banner_hint --><a href='javascript:%20window.status="";%20var%20a%20=%20window.open("https://testjmb.alfabank.ru/ALFAIBSR_FT4/","","resizable=yes,left=0,top=0,toolbar=yes,status=yes,scrollbars=yes,menubar=no,location=no,width=1024,height=768");%20void(0);'><img src="index2_data/banner.txt" class="left_banner" alt="" border="0" height="66" width="178"></a><div class="left_container" style="margin-top:56px;margin-left:30px"><div><!-- unused hint: bannerThawte_banner_hint --><script src="index2_data/getthawteseal"></script><a href="https://sealinfo.thawte.com/thawtesplash?form_file=fdf/thawtesplash.fdf&amp;dn=CLICK.ALFABANK.RU&amp;lang=en" tabindex="-1" onmousedown="return v_mDown(event);" target="THAWTE_Splash"><img name="seal" src="index2_data/getthawteseal.gif" oncontextmenu="return false;" alt="Click to Verify - This site has chosen a thawte SSL Certificate to improve Web site security" border="true"></a></div>
+</div>
+           </td>           
+       <!-- center -->           <td class="main_middle"><table align="center" border="0" cellpadding="2" cellspacing="2">
+<tbody><tr>
+<td>
+<span style="display: none;" id="PROGRESSBODYID" class="body">
+<div name="PROGRESSIMG" id="PROGRESSIMGID" class="progress">Подождите, пожалуйста...</div></span>
+</td>
+</tr>
+</tbody></table>
+<div class="popup_main" style="z-index: 3; width: 450px; height: 168px; top: 215px; left: 375px; cursor: pointer; visibility: hidden;" id="ENDINGSESSIONBODYID">
+<table class="popup_main_table" border="0" cellpadding="5" cellspacing="0" width="450"><tbody><tr><td class="popup_header">
+Закрытие сессии</td></tr><tr><td>
+<table align="center" border="0" cellpadding="10" cellspacing="0" width="100%">
+     <tbody><tr><td align="center"><div id="warning">Некоторое время Вы оставались неактивны. В целях безопасности соединение с сервером будет прервано через 1 минуту. <br>Если Вы хотите продолжить работу нажмите кнопку.</div></td></tr>     <tr><td align="center" height="10"><div id="time">&nbsp;</div></td></tr>
+     <tr><td align="center" height="20">
+<table border="0" cellpadding="0" cellspacing="0">     <tbody><tr>     <td><img src="index2_data/btn_left.gif" alt="" height="19" width="3"></td>     <td class="button">         <div id="link"></div>     </td><td><img src="index2_data/btn_right.gif" alt="" height="19" width="3"></td>     <td><img src="index2_data/s.gif" alt="" height="19" width="3"></td><td><div id="secondButton"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr>     <td><img src="index2_data/btn_left.gif" alt="" height="19" width="3"></td>     <td class="button">     <a id="endSessionBtn2" href="javascript:hideElement('ENDINGSESSIONBODYID');document.location='index.jsp';" onclick="javascript:hideElement('ENDINGSESSIONBODYID');document.location='index.jsp';">Выход</a></td>     <td><img src="index2_data/btn_right.gif" alt="" height="19" width="3"></td></tr></tbody></table></div></td></tr></tbody></table>     </td></tr></tbody></table>
+</td></tr></tbody></table></div>
+<div style="width: 450px; height: 155px; top: 215px; left: 375px; z-index: 0; cursor: pointer; visibility: hidden;" class="popup_main" id="CONFIRMATIONDIALOGID">
+<table class="popup_main_table" border="0" cellpadding="5" cellspacing="0" width="450"><tbody><tr><td class="popup_header">
+Внимание!</td></tr><tr><td>
+<table align="center" border="0" cellpadding="10" cellspacing="0" width="100%">
+     <tbody><tr><td align="center">Вы действительно хотите покинуть эту страницу? Введенная вами информация не сохранится!</td></tr>     <tr><td align="center" height="10">&nbsp;</td></tr>
+     <tr><td align="center" height="20">
+<table border="0" cellpadding="0" cellspacing="0">     <tbody><tr>     <td><img src="index2_data/btn_left.gif" alt="" height="19" width="3"></td>     <td class="button"> <a id="confirmAbortBtn" href="javascript:void(0)" onclick="javascript:void(0);">Да</a></td>     <td><img src="index2_data/btn_right.gif" alt="" height="19" width="3"></td>
+<td><img src="index2_data/s.gif" alt="" height="19" width="10"></td>     <td><img src="index2_data/btn_left.gif" alt="" height="19" width="3"></td>     <td class="button"> <a id="confirmContinueBtn" href="javascript:void(0)" onclick="javascript:void(0);">Нет</a></td>     <td><img src="index2_data/btn_right.gif" alt="" height="19" width="3"></td></tr></tbody></table>     </td></tr></tbody></table>
+</td></tr></tbody></table></div>
+             <div id="BODYID"><table class="layout" cellpadding="0" cellspacing="0" width="100%">           <tbody><tr><td>             <div class="main_header" id="pathHolder">
+<!-- unused hint: pathCtrlMenu_menu.2_hint --><a id="pathCtrlLevel1" href="javascript:%20void(0);" onclick='javascript:  post("pathctrl_loadMenu1_onMyAccountsMainPage");; return false;'>Мои счета</a><img src="index2_data/bullet_lightgray.gif" class="path_divider" alt="" height="5" width="5"><!-- unused hint: pathCtrlMenu_menu.2.2_hint --><br>
+Фильтр             </div>
+           </td></tr>           <tr><td>             &nbsp;           </td></tr>           <tr><td>
+
+
+
+
+
+
+
+            
+
+ 
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><div class="movement_list"><table class="inputFormTable1" width="99%"><tbody><tr><td><form name="mainFrm" method="POST" action="ControllerServlet;jsessionid=0000DcpplV0OhbxCka-Ov8vQZXt:-1" onsubmit="postFilter()" id="mainFrm"><input name="command" value="balancesMovements_filterVerify" type="hidden"><input name="verificationGroupName" value="movementFilter" type="hidden"><input name="clientPCInfo" value="" type="hidden">
+            <input name="exportReloadNeeded" value="false" type="hidden">
+    	<!-- === FORM GROUP --><table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tbody><tr><td class="formLabel" valign="middle" width="150"><script type="text/javascript">var movementList_accountNumber_hint_text_link = "html/help03.html"; var movementList_accountNumber_hint_text = "Выберите счет для просмотра подробной выписки по нему<br/><a id='movementList_accountNumber_hint_text_link'  href='javascript: void(0);' onclick='javascript: help(movementList_accountNumber_hint_text_link);'>Подробнее...</a>"; fncHintLinksArray.push('movementList_accountNumber_hint_text_link');</script><span onmouseover="showHint(movementList_accountNumber_hint_text,500,90);" onmouseout="hideHintCheck();"><!-- used hint: movementList_accountNumber_hint -->Номер счета: </span>&nbsp;</td><td class="formData" valign="middle"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td nowrap="nowrap"></td><td><!-- unused hint: movementList_accountNumber_select_hint --><select style="width:380px" name="accountNumber" tabindex="2" class="widerSelect"><option value="40817840408890000400">Текущий счет - 40817840408890000400 - 0.00 USD</option><option value="40817810008890002281" selected="selected">Текущий счет - 40817810008890002281 - 59894.58 RUR</option><option value="40817978508890000366">Текущий счет - 40817978508890000366 - 0.00 EUR</option><option value="40817840708890000401">Счет "Мой сейф" - 40817840708890000401 - 0.00 USD</option><option value="40817810308890002282">Счет "Мой сейф" - 40817810308890002282 - 0.00 RUR</option><option value="40817978808890000367">Счет "Мой сейф" - 40817978808890000367 - 0.00 EUR</option></select></td></tr></tbody></table></td><td valign="middle"></td><td class="formData" width="1"><img src="index2_data/spacer.gif" alt="" border="0" height="30" width="1"></td></tr>
+			<tr><td class="formLabel" valign="middle" width="150"><script type="text/javascript">var movementList_period_hint_text_link = "html/help03.html"; var movementList_period_hint_text = "Выберите более точный период для составления выписки<br/><a id='movementList_period_hint_text_link'  href='javascript: void(0);' onclick='javascript: help(movementList_period_hint_text_link);'>Подробнее...</a>"; fncHintLinksArray.push('movementList_period_hint_text_link');</script><span onmouseover="showHint(movementList_period_hint_text,500,90);" onmouseout="hideHintCheck();"><!-- used hint: movementList_period_hint -->Период: </span>&nbsp;</td><td class="formData" valign="middle"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><!-- unused hint: movementList_period_select_hint --><select name="period" class="thin" tabindex="3" onchange="javascript:enablePeriodDateBoxes(); "><option value="0">За сегодня</option><option value="1">За неделю</option><option value="2">За месяц</option><option value="4">За 3 месяца</option><option value="3" selected="selected">Период выписки</option></select></td><td><img src="index2_data/spacer.gif" alt="" border="0" height="1" width="35"><div id="periodRange"></div></td><!-- startdate --><td><div style="visibility: visible; display: block;" id="datesArea"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="formLabel" nowrap="nowrap" valign="middle">
+</td>
+<td valign="middle"><table border="0" cellpadding="0" cellspacing="0" width="60%"><tbody><tr><td colspan="7"><img src="index2_data/s.gif" alt="" class="spacer" height="1"></td></tr><tr>
+<td class="formLabel" align="left" nowrap="nowrap" valign="middle">
+с: &nbsp;</td>
+<td class="formData" valign="middle" width="20">
+<input class="thin2" name="startDate" size="15" maxlength="10" value="19.07.2012" tabindex="4" type="text"></td><td align="left" valign="middle" width="20"><a href="#" onclick="cal1x.setNow(20,7,2012);cal1x.select(document.mainFrm.startDate,'anchor_startDate_1x','dd.MM.yyyy'); return false;" title="Выбрать дату" alt="Выбрать дату" name="anchor_startDate_1x" id="anchor_startDate_1x"><img alt="" src="index2_data/i_calendar.gif" onmouseover="return st(this)" onmouseout="return st()" border="0"></a></td><td><img src="index2_data/spacer.gif" alt="" border="0" height="1" width="10"></td><td class="formLabel" align="left" nowrap="nowrap" valign="middle">
+по: &nbsp;</td>
+<td class="formData" valign="middle" width="20">
+<input class="thin2" name="endDate" size="15" maxlength="10" value="19.07.2012" tabindex="5" type="text"></td><td align="left" valign="middle" width="20"><a href="#" onclick="cal1x.setNow(20,7,2012);cal1x.select(document.mainFrm.endDate,'anchor_endDate_1x','dd.MM.yyyy'); return false;" title="Выбрать дату" alt="Выбрать дату" name="anchor_endDate_1x" id="anchor_endDate_1x"><img alt="" src="index2_data/i_calendar.gif" onmouseover="return st(this)" onmouseout="return st()" border="0"></a></td></tr></tbody></table></td>
+<td class="formData" width="1"><img src="index2_data/spacer.gif" alt="" border="0" height="30" width="1"></td></tr></tbody></table></div></td><!-- enddate --><td style="padding-left: 5px;"><!-- unused hint: movementList_show_button_hint --><table id="container-defBtnID" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="index2_data/btn_left.gif" alt="" height="19" width="3"></td><td class="button" nowrap="nowrap"><a id="defBtnID" href="javascript:void(0);" onclick="javascript: periodSubmit(); return false;">Показать</a></td><td><img src="index2_data/btn_right.gif" alt="" height="19" width="3"></td></tr></tbody></table></td></tr></tbody></table></td><td valign="middle"></td><td class="formData" width="1"><img src="index2_data/spacer.gif" alt="" border="0" height="30" width="1"></td>
+				<script language="javascript" type="text/javascript">
+					enablePeriodDateBoxes();
+				</script>
+	
+				
+				
+                        </tr><tr>
+                            <td class="formLabel" valign="middle" width="150"><!-- unused hint: movementList_saveAs_hint -->Сохранить как файл: &nbsp;</td><td class="formData" valign="middle"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td nowrap="nowrap"><!-- unused hint: movementList_saveAs_select_hint --><select name="saveAs" id="saveAs" class="thin" tabindex="6" onchange="javascript:void(0);"><option value="0" selected="selected">CSV-формат</option><option value="1">EasyFinance.ru</option><option value="2">OFX</option></select></td><td align="left" width="85%"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="index2_data/s.gif" alt="" height="19" width="5"></td><td nowrap="nowrap"><!-- unused hint: movementList_save_button_hint --><table id="container-movementList_saveID" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="index2_data/btn_left.gif" alt="" height="19" width="3"></td><td class="button" nowrap="nowrap"><a id="movementList_saveID" href="javascript:void(0);" onclick="javascript:saveAsFunc(); return false;">Сохранить</a></td><td><img src="index2_data/btn_right.gif" alt="" height="19" width="3"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td><td valign="middle"></td><td class="formData" width="1"><img src="index2_data/spacer.gif" alt="" border="0" height="30" width="1"></td>
+                        </tr>
+                        
+
+		<!-- * FORM GROUP --></tbody></table><!-- ** FORM GROUP --> 
+		
+
+    	<br>
+
+		
+	</form></td></tr></tbody></table></div></td></tr></tbody></table>
+
+	<table id="detailID" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="white_table">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr><td class="col1" nowrap="nowrap"><!-- unused hint: movementList_det.clientName_label_hint -->ФИО клиента: </td><td class="col2">Иван&nbsp;Субботин</td></tr>
+			<tr class="hilite"><td class="col1" nowrap="nowrap"><!-- unused hint: movementList_det.accountType_label_hint -->Тип счета: </td><td class="col2">Текущий счет</td></tr>
+			<tr><td class="col1" nowrap="nowrap"><!-- unused hint: movementList_det.accountNumber_label_hint -->Номер счета: </td><td class="col2">40817810008890002281</td></tr>
+			<tr class="hilite"><td class="col1" nowrap="nowrap"><!-- unused hint: movementList_det.accountCurrency_label_hint -->Валюта: </td><td class="col2">RUR</td></tr>
+			<tr><td class="col1" nowrap="nowrap"><!-- unused hint: movementList_det.balanceWithoutOverdraft_label_hint -->Доступно без овердрафта: </td><td class="col2" align="right">59&nbsp;894.58&nbsp;RUR</td></tr>
+                        
+                        
+                        <tr class="hilite"><td class="col1" nowrap="nowrap" valign="top"><!-- unused hint: movementList_det.sumOfHolds_label_hint -->Неподтвержденные операции: </td><td class="col2">0.00&nbsp;RUR</td></tr>
+                        <tr><td class="col1" nowrap="nowrap" valign="top"><!-- unused hint: movementList_det.openingBalance_label_hint -->Баланс на начало периода: </td><td class="col2">203&nbsp;313.99&nbsp;RUR</td></tr>
+                        <tr class="hilite"><td class="col1" nowrap="nowrap" valign="top"><!-- unused hint: movementList_det.closingBalance_label_hint -->Баланс на конец периода: </td><td class="col2">188&nbsp;844.00&nbsp;RUR</td></tr>
+                        <tr><td class="col1" nowrap="nowrap" valign="top"><!-- unused hint: movementList_det.creditTurnOver_label_hint -->Приход: </td><td class="col2">84&nbsp;137.37&nbsp;RUR</td></tr>
+                        <tr class="hilite"><td class="col1" nowrap="nowrap" valign="top"><!-- unused hint: movementList_det.debitTurnOver_label_hint -->Расход: </td><td class="col2">98&nbsp;607.36&nbsp;RUR</td></tr>
+                        
+		</tbody></table>
+	</td></tr></tbody></table>
+
+	<br>
+	
+	<!-- ++ LIST --><table style="border-collapse: collapse;" class="tableWithRowSpan" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+			<td class="header" nowrap="nowrap"><a href='javascript:sort("balancesMovements_listSortingSet",%20"movementDate:asc:D")' title="Сортировка по данной колонке">Дата<img src="index2_data/asc.gif" alt="" border="0"></a></td>
+			<td class="header" nowrap="nowrap">Референс</td>
+			<td class="header" nowrap="nowrap">Примечание</td>
+			<td class="header" nowrap="nowrap">Приход</td>
+			<td class="header" nowrap="nowrap">Расход</td>
+                        <td class="header" nowrap="nowrap"><a href='javascript:sort("balancesMovements_listSortingSet",%20"balance:desc:N")' title="Сортировка по данной колонке">Баланс на конец дня</a></td>
+		</tr>
+                <tr id="a1">
+                    
+                    
+                    <td class="row1" rowspan="9">19.07.2012</td>
+                    <td class="row1">OP1ED00649609828</td>
+                    <td class="row1">Частный перевод, НДС не облагается. от ЗАЙЦЕВ АЛЕКСАНДР ВАСИЛЬЕВИЧ 40817810609960009681 044525593 30101810200000000593</td>
+                    <td class="row1" align="left">50&nbsp;000.00&nbsp;RUR</td>
+                    <td class="row1" align="left">&nbsp;</td>
+                    <td class="row1" rowspan="9">188&nbsp;844.00&nbsp;RUR</td>
+                    
+                    
+                        </tr>
+                        <tr>
+                        <td class="row1">OP1ED00649604486</td>
+                        <td class="row1">Частный перевод, НДС не 
+облагается                                    01 N 1117 1907 
+40817810704550035591044525593 30101810200000000593</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        <td class="row1" align="left">‑2&nbsp;516.82&nbsp;RUR</td>
+                        
+                        
+                    </tr>
+                    
+                        
+                        <tr>
+                        <td class="row1">OP1ED00649597067</td>
+                        <td class="row1">Частный перевод, НДС не облагается" от Кропотов Александр Дмитриевич 40817810904280023437 044525593 30101810200000000593</td>
+                        <td class="row1" align="left">4&nbsp;290.74&nbsp;RUR</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        
+                        
+                    </tr>
+                    
+                        
+                        <tr>
+                        <td class="row1">OP1ED00649592844</td>
+                        <td class="row1">Частный перевод, НДС не облагается" от Кропотов Александр Дмитриевич 40817810904280023437 044525593 30101810200000000593</td>
+                        <td class="row1" align="left">16&nbsp;506.14&nbsp;RUR</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        
+                        
+                    </tr>
+                    
+                        
+                        <tr>
+                        <td class="row1">OP1ED00649364976</td>
+                        <td class="row1">Частный перевод, НДС не 
+облагается                                    01 N 1115 1907 
+40817810108620003952044525593 30101810200000000593</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        <td class="row1" align="left">‑65&nbsp;000.00&nbsp;RUR</td>
+                        
+                        
+                    </tr>
+                    
+                        
+                        <tr>
+                        <td class="row1">OP1ED00649289927</td>
+                        <td class="row1">Частный перевод, НДС не 
+облагается                                    01 N 1114 1907 
+40817810808160006489044525593 30101810200000000593</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        <td class="row1" align="left">‑1&nbsp;090.54&nbsp;RUR</td>
+                        
+                        
+                    </tr>
+                    
+                        
+                        <tr>
+                        <td class="row1">OP1ED00649284889</td>
+                        <td class="row1">Частный перевод, НДС не облагается" от Кропотов Александр Дмитриевич 40817810904280023437 044525593 30101810200000000593</td>
+                        <td class="row1" align="left">13&nbsp;340.49&nbsp;RUR</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        
+                        
+                    </tr>
+                    
+                        
+                        <tr>
+                        <td class="row1">QIO005I476PNHV1V</td>
+                        <td class="row1">N QI020120719020937843. Платёж в систему QIWI. Без НДС. Л/сч 9233325076, 19.07.2012, 02-09-38.</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        <td class="row1" align="left">‑15&nbsp;000.00&nbsp;RUR</td>
+                        
+                        
+                    </tr>
+                    
+                        
+                        <tr>
+                        <td class="row1">QIO005I476PNFST5</td>
+                        <td class="row1">N QI020120719020841625. Платёж в систему QIWI. Без НДС. Л/сч 9233325076, 19.07.2012, 02-08-41.</td>
+                        <td class="row1" align="left">&nbsp;</td>
+                        <td class="row1" align="left">‑15&nbsp;000.00&nbsp;RUR</td>
+                        
+                        
+                    
+                    
+                        
+                        
+                        
+                </tr>
+	</tbody></table><!-- ** LIST -->
+   	<!-- + PageIndicator--><table class="noprint" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="pages_list" align="right"><table><tbody><tr><td nowrap="nowrap"></td><td nowrap="nowrap"></td><td nowrap="nowrap"></td></tr></tbody></table></td></tr></tbody></table><!-- * PageIndicator-->    
+
+
+
+
+
+
+<br><br>
+
+    
+    
+   
+	
+
+<iframe id="iframeLayer" style="position: absolute; z-index: 2; display: none;" src="index2_data/blank.htm" frameborder="0"></iframe>             </td></tr></tbody></table><table id="serviceMenu" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td width="50%">
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><!-- unused hint: movementList_printID_button_hint --><table id="container-movementList_printID" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="index2_data/btn_left.gif" alt="" height="19" width="3"></td>
+<td class="button" nowrap="nowrap"><a id="movementList_printID" href='javascript:printPopup("balancesMovements_myAccountsMovementsPrint",1)'>Печать</a></td>
+<td><img src="index2_data/btn_right.gif" alt="" height="19" width="3"></td>
+</tr></tbody></table></td><td><img id="container-movementList_printID-spacer" src="index2_data/s.gif" alt="" height="19" width="10"></td></tr></tbody></table></td></tr></tbody></table>             </div>             
+        
+           </td>
+       <!-- End center -->
+      
+           <td class="main_right">
+        
+             <div class="right_container">
+               <div class="plate_yellow"><!-- unused hint: menu_myTemplates_hint --><b>Избранное</b></div>
+               <div class="list_container">
+                 <div class="list_yellow"><!-- unused hint: submenu_myTemplates_addLink_hint --><a id="" href="javascript:%20void(0);" onclick='javascript: post("client_templatesManagement", "init", "freqUsedTemplates"); return false;'>Добавить шаблоны</a></div>
+               </div>
+             </div>
+             <div class="right_container">
+               <div class="plate_yellow"><!-- unused hint: submenu_operations_menu.movement_list.1_hint --><b>Переводы</b></div>
+               <div class="list_container">
+<div class="list_yellow"><!-- unused hint: submenu_operations_menu.movement_list.1.1_hint --><a id="operation1" href="javascript:%20void(0);" onclick='javascript: post("CINTPONew_clearForm");; return false;'>Между своими счетами</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_operations_menu.movement_list.1.2_hint --><a id="operation2" href="javascript:%20void(0);" onclick='javascript: post("CEXPONew_clearForm");; return false;'>Обмен валют</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_operations_menu.movement_list.1.3_hint --><a id="operation3" href="javascript:%20void(0);" onclick='javascript: post("INHPONew_clearForm");; return false;'>Другому клиенту Альфа-Банка</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_operations_menu.movement_list.1.4_hint --><a id="operation4" href="javascript:%20void(0);" onclick='javascript: post("DPONew_clearForm");; return false;'>В другой банк</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_operations_menu.movement_list.1.5_hint --><a id="operation5" href="javascript:%20void(0);" onclick='javascript: post("TXPNew_clearForm");; return false;'>В бюджет РФ</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_operations_menu.movement_list.1.6_hint --><a id="operation6" href="javascript:%20void(0);" onclick='javascript: post("history_setTranType", "OPERATION");; return false;'>История переводов</a></div>
+               </div>
+             </div>       
+        
+             <div class="right_container">
+               <div class="plate_yellow"><!-- unused hint: submenu_payments_menu.movement_list.1_hint --><b>Оплата услуг и другие платежи</b></div>
+               <div class="list_container">
+<div class="list_yellow"><!-- unused hint: submenu_payments_menu.movement_list.1.1_hint --><a id="payment1" href="javascript:%20void(0);" onclick='javascript: post("RCHARNew_clearForm");        ; return false;'>Мобильная связь</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_payments_menu.movement_list.1.2_hint --><a id="payment2" href="javascript:%20void(0);" onclick='javascript: post("COMMONew_clearForm");        ; return false;'>Жилищно-коммунальные услуги</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_payments_menu.movement_list.1.3_hint --><a id="payment3" href="javascript:%20void(0);" onclick='javascript: post("MGTSNew_clearForm");         ; return false;'>Городская телефонная связь</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_payments_menu.movement_list.1.4_hint --><a id="payment4" href="javascript:%20void(0);" onclick='javascript: post("IPROVIDERONew_clearForm");; return false;'>Услуги Интернет-провайдеров</a></div>
+<div class="list_yellow"><!-- unused hint: submenu_payments_menu.movement_list.1.5_hint --><a id="payment5" href="javascript:%20void(0);" onclick='javascript: post("history_setTranType", "PAYMENT");   ; return false;'>История платежей</a></div>
+               </div>
+             </div>       
+        
+           </td>
+         </tr>
+       </tbody></table>
+       <!-- //top section -->
+    
+     </td>
+   </tr>  
+  
+   <tr>
+     <td valign="bottom">
+       <!-- bottom section -->
+       <table border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody><tr>
+           <td class="bottom_left"></td>
+           <td class="bottom_right" align="right"><img src="index2_data/ushu.jpg" alt="" height="199" width="223"></td>
+         </tr>
+         <tr>
+           <td class="bottom_left">
+             <div class="left_container" style="width:200px; padding-bottom:0px ">
+               <div class="plate_red">
+                 Телефонный центр:<br>
+                 <span class="red"><b>8 495 78-888-78 (Москва)<br> 8 800 200-00-00 (Регионы)</b></span>
+               </div>
+             </div>       
+           </td>
+           <td class="bottom_right" align="right">
+             <div class="red_background" style="margin-bottom:9px "><img src="index2_data/s.gif" alt="" height="1" width="1"></div>
+             <table id="BOTTOMFOOTER" border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tbody><tr>
+                 <td>
+                   <a href='javascript:%20help("http://clickdemo.alfabank.ru/");' class="gray">Презентация</a> <span class="link_divider">|</span>
+                   <a href='javascript:%20help("http://alfabank.ru/retail/tariff_plans/");' class="gray">Пакеты услуг</a> <span class="link_divider">|</span>
+                   <a href='javascript:%20help("html/help00.html");' class="gray">Помощь</a>
+                 </td>
+                 <td style="padding: 0px 20px 0px 10px;" align="right"><span class="nowrap">Мы в социальных сетях:&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/#%21/alfaclick" target="_blank"><img src="index2_data/twitter.txt" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="http://www.facebook.com/alfaonline" target="_blank"><img src="index2_data/facebook.txt" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="http://vkontakte.ru/club22100769" target="_blank"><img src="index2_data/vkontakte.jpg" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="http://www.odnoklassniki.ru/alfabank" target="_blank"><img src="index2_data/odkl.gif" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Интернет-банк
+ "Альфа-Клик".</span> <span class="nowrap">Copyright © 2001-2012 <a href="http://alfabank.ru/retail/">Альфа-Банк</a></span></td>
+               </tr>
+             </tbody></table>
+           </td>
+         </tr>
+       </tbody></table>
+       <!-- //bottom section -->
+     </td>
+   </tr>   
+ </tbody></table>
+<script type="text/javascript">
+addMovableElement("CONFIRMATIONDIALOGID"+RESET_Z);makeMovable(movableElements);showEndingSessionWarning(780,"Продолжить","Выход","Сеанс прекращен.","Сеанс будет прекращен через","сек");
+</script>
+
+<script type="text/javascript">
+	var elementsToDisable = new Array("datesArea");
+        
+        
+        var sortLinkFrm = document.forms["SortLink"];
+        if (sortLinkFrm != null){
+            sortLinkFrm.custom2.value = 'false';
+        }
+</script>
+<div class="noprint"> 
+
+</div>
+
+<ajax:enable>
+
+
+</ajax:enable></body></html>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_referer" value="name:id;datatype:int,name:ref;datatype:blob,name:scrname;datatype:blob,name:clid;datatype:blob,name:partnerid;datatype:int,name:ip;datatype:blob,name:time;datatype:timestamp" />
+</info>

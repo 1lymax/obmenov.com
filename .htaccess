@@ -1,0 +1,9 @@
+<Limit GET POST>
+	require valid-user
+</Limit>
+AuthType Basic
+AuthName "/www/top.obmenov.com"
+AuthUserFile /var/www/webmoney_ma/data/etc/80249699.passwd
+RewriteEngine On
+RewriteRule ^_([^/]*)/([^/]*)$ /page.php?lang=$1&page=$2 [L]
+RewriteRule ^([^/]*)/([^/]*)\.html$ /exchange/index.php?lang=$1&type=$2&exchange=$3 [L]

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_orders" value="name:summin;datatype:real,name:summout;datatype:real,name:currin;datatype:blob,name:currout;datatype:blob,name:ordered;datatype:int,name:attach;datatype:real,name:clid;datatype:blob,name:id;datatype:int,name:orderid;datatype:int,name:LMI_SYS_TRANS_NO;datatype:blob" />
+</info>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_prepaid" value="name:id;datatype:int,name:itemid;datatype:int,name:content;datatype:string,name:state;datatype:string,name:reserved;datatype:datetime" />
+</info>
